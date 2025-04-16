@@ -12,9 +12,14 @@
             --secondary-color: #dc2626;
             --background-color: #000000;
             --card-background: #1a1a1a;
+            --card-seen: #1e293b;
+            --card-captured: #1e3a8a;
             --text-color: #f3f4f6;
             --safe-area-inset-top: env(safe-area-inset-top);
             --safe-area-inset-bottom: env(safe-area-inset-bottom);
+            --seen-color: #60a5fa;
+            --captured-color: #4ade80;
+            --shiny-color: #fbbf24;
         }
 
         * {
@@ -40,20 +45,16 @@
             max-width: 1024px;
             margin: 0 auto;
             padding: 1rem 1.5rem;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
         }
 
         header {
             text-align: center;
-            position: relative;
+            position: sticky;
+            top: 0;
             background-color: var(--background-color);
             padding: 1rem 0;
-            width: 100%;
+            z-index: 100;
+            position: relative;
         }
 
         h1 {
@@ -62,12 +63,159 @@
             margin-bottom: 1rem;
         }
 
-        .message {
+        .search-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            padding: 0.75rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            background-color: rgba(24, 24, 27, 0.8);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(63, 63, 70, 0.5);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.5rem;
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .stat-emoji {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            text-align: center;
+            margin-top: 0.25rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #searchInput {
+            padding: 0.75rem 1rem;
+            border: 2px solid #4b5563;
+            border-radius: 0.75rem;
+            width: 100%;
+            max-width: 500px;
+            font-size: 1.1rem;
+            background-color: var(--card-background);
+            color: var(--text-color);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        #searchInput::placeholder {
+            color: #9ca3af;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Default for tablets */
+            gap: 1rem;
+            padding: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
             background-color: var(--card-background);
             border-radius: 1rem;
-            padding: 2rem;
-            margin-top: 2rem;
-            max-width: 600px;
+            color: #9ca3af;
+            font-size: 1.2rem;
+        }
+
+        .pokemon-card {
+            background-color: var(--card-background);
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-left: 0;
+            box-sizing: border-box;
+            opacity: 0.7;
+        }
+
+        .pokemon-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            line-height: 1.2;
+            padding-right: 15px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .pokemon-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .status-badges {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            color: #9ca3af;
+            font-size: 0.875rem;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .emoji-icon {
+            font-size: 1.5rem;
+            opacity: 0.4;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            filter: grayscale(100%);
         }
 
         .back-button {
@@ -85,6 +233,108 @@
             align-items: center;
             justify-content: center;
         }
+
+        .coming-soon-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .coming-soon-message {
+            background-color: var(--card-background);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 90%;
+            width: 500px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(63, 63, 70, 0.5);
+        }
+        
+        .coming-soon-message h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile devices in portrait */
+        @media screen and (max-width: 767px) {
+            .container {
+                padding: 0.75rem;
+            }
+
+            .pokemon-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+                gap: 0.75rem;
+                padding: 0.25rem;
+            }
+
+            .pokemon-card {
+                padding: 0.75rem;
+            }
+
+            .pokemon-name {
+                font-size: 0.9rem;
+            }
+
+            .stat-emoji {
+                font-size: 0.9rem;
+            }
+
+            .emoji-icon {
+                font-size: 1.1rem;
+            }
+            
+            .badge {
+                gap: 0;
+            }
+            
+            .stat-item {
+                padding: 0.4rem;
+            }
+            
+            .stat-value {
+                font-size: 1.25rem;
+            }
+            
+            .stats-container {
+                gap: 0.75rem;
+                padding: 0.6rem;
+            }
+            
+            #searchInput {
+                padding: 0.6rem 0.8rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Larger screens */
+        @media screen and (min-width: 1025px) {
+            .pokemon-grid {
+                grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+                gap: 1.25rem;
+            }
+            
+            .container {
+                padding: 2rem;
+                max-width: 1400px;
+            }
+            
+            .pokemon-card {
+                padding: 0.85rem;
+                height: 100%;
+            }
+            
+            .pokemon-name {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,19 +342,90 @@
         <header>
             <div class="back-button" id="backButton">&larr;</div>
             <h1>Pokémon Scarlet</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by name, number, or shiny status..." disabled>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="seenCount">0</span>
+                        <span class="stat-emoji">👀 Seen</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="capturedCount">0 / 400</span>
+                        <span class="stat-emoji">📦 Captured</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="shinyCount">0</span>
+                        <span class="stat-emoji">✨ Shiny</span>
+                    </div>
+                </div>
+            </div>
         </header>
-        <div class="message">
+        <div class="pokemon-grid" id="pokemonGrid"></div>
+    </div>
+
+    <div class="coming-soon-overlay" id="comingSoonOverlay">
+        <div class="coming-soon-message">
             <h2>Coming Soon</h2>
-            <p>The Pokémon Scarlet Pokedex is currently under development. 
-            <br>Please check back later.</p>
+            <p>The Pokémon Scarlet Pokedex data is unavailable.
+            <p></p>You can see placeholder cards for now.</p>
+            <p style="margin-top: 1rem;"><button id="closeOverlay" style="padding: 0.5rem 1rem; background-color: var(--secondary-color); border: none; border-radius: 0.5rem; color: white; cursor: pointer;">View Placeholders</button></p>
         </div>
     </div>
 
     <script>
+        // Generate placeholder data for 400 Pokémon
+        const placeholderPokemon = [];
+        for (let i = 1; i <= 400; i++) {
+            placeholderPokemon.push({
+                id: i,
+                name: `#${i.toString().padStart(3, '0')}`,
+                seen: false,
+                captured: false,
+                shiny: false
+            });
+        }
+
+        function displayPlaceholderPokemon() {
+            const grid = document.getElementById('pokemonGrid');
+            grid.innerHTML = '';
+
+            placeholderPokemon.forEach(pokemon => {
+                const card = document.createElement('div');
+                card.className = 'pokemon-card';
+                
+                card.innerHTML = `
+                    <div class="pokemon-info-container">
+                        <div class="pokemon-name">${pokemon.name}</div>
+                    </div>
+                    <div class="status-badges">
+                        <div class="badge">
+                            <span class="emoji-icon">👀</span>
+                        </div>
+                        <div class="badge">
+                            <span class="emoji-icon">📦</span>
+                        </div>
+                        <div class="badge">
+                            <span class="emoji-icon">✨</span>
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Display the placeholder Pokémon
+            displayPlaceholderPokemon();
+            
             // Add click handler for the back button
             document.getElementById('backButton').addEventListener('click', () => {
                 window.location.href = 'index.html';
+            });
+
+            // Add click handler for the overlay close button
+            document.getElementById('closeOverlay').addEventListener('click', () => {
+                document.getElementById('comingSoonOverlay').style.display = 'none';
             });
         });
     </script>

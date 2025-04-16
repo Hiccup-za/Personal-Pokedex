@@ -73,11 +73,15 @@
             gap: 1rem;
             margin-top: 1rem;
             margin-bottom: 0rem;
-            padding: 0.5rem;
+            padding: 0.75rem;
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
             width: 100%;
+            background-color: rgba(24, 24, 27, 0.8);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(63, 63, 70, 0.5);
         }
 
         .stat-item {
@@ -86,12 +90,8 @@
             align-items: center;
             justify-content: center;
             gap: 0.25rem;
-            background-color: var(--card-background);
-            border-radius: 0.75rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
+            padding: 0.5rem;
             flex: 1;
-            height: 80px;
         }
 
         .stat-value {
@@ -99,19 +99,15 @@
             font-weight: 600;
             color: #ffffff;
             line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: #6b7280;
-            text-align: center;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .stat-emoji {
             font-size: 1.25rem;
-            color: #9ca3af;
+            color: #a1a1aa;
             text-align: center;
             margin-top: 0.25rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         #searchInput {
@@ -184,31 +180,175 @@
         .pokemon-card.seen {
             background-color: var(--card-seen);
             border-left: 0;
-            box-shadow: 0 0 0 2px var(--seen-color);
+            box-shadow: 0 0 0 2px var(--seen-color), 0 0 10px rgba(96, 165, 250, 0.3);
             border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(160deg, 
+                rgba(30, 58, 138, 0.5) 0%,
+                rgba(96, 165, 250, 0.2) 100%);
         }
 
         .pokemon-card.seen::before {
-            display: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 85% 7%, rgba(147, 197, 253, 0.3) 0%, rgba(147, 197, 253, 0) 20%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
         }
 
         .pokemon-card.captured {
             background-color: var(--card-captured);
             border-left: 0;
-            box-shadow: 0 0 0 2px var(--captured-color);
+            box-shadow: 0 0 0 2px var(--captured-color), 0 0 10px rgba(74, 222, 128, 0.3);
             border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(160deg, 
+                rgba(6, 78, 59, 0.6) 0%,
+                rgba(5, 150, 105, 0.3) 100%);
         }
 
         .pokemon-card.captured::before {
-            display: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 85% 7%, rgba(134, 239, 172, 0.4) 0%, rgba(134, 239, 172, 0) 25%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
         }
 
         .pokemon-card.seen .pokemon-name {
             color: #93c5fd;
+            position: relative;
+            z-index: 2;
         }
 
         .pokemon-card.captured .pokemon-name {
             color: #86efac;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.seen .pokemon-info,
+        .pokemon-card.captured .pokemon-info {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.seen .status-badges,
+        .pokemon-card.captured .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Shiny pokemon styling */
+        .pokemon-card.shiny {
+            background-color: #1a1a42;
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--shiny-color), 0 0 15px rgba(251, 191, 36, 0.6);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.25) 0%,
+                rgba(138, 43, 226, 0.2) 40%,
+                rgba(36, 36, 90, 0.7) 100%);
+        }
+
+        .pokemon-card.shiny::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.15),  /* Gold */
+                rgba(138, 43, 226, 0.15), /* Purple */
+                rgba(0, 191, 255, 0.15),  /* Blue */
+                rgba(50, 205, 50, 0.15),  /* Green */
+                rgba(255, 105, 180, 0.15) /* Pink */
+            );
+            background-size: 300% 300%;
+            border-radius: 1rem;
+            z-index: 1;
+            pointer-events: none;
+            animation: gradient 10s linear infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-card.shiny {
+            position: relative;
+        }
+
+        .pokemon-card.shiny::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.shiny .pokemon-name {
+            color: #fef3c7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.shiny .pokemon-info {
+            position: relative;
+            z-index: 2;
+            color: #fdba74;
+        }
+
+        .pokemon-card.shiny .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.shiny:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6), 0 0 0 2px var(--shiny-color);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 50% 100%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            75% {
+                background-position: 50% 0%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .pokemon-card:active {
@@ -222,12 +362,12 @@
 
         .pokemon-card.seen:hover {
             transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4), 0 0 0 2px var(--seen-color);
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.6), 0 0 0 2px var(--seen-color);
         }
 
         .pokemon-card.captured:hover {
             transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.4), 0 0 0 2px var(--captured-color);
+            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.6), 0 0 0 2px var(--captured-color);
         }
 
         .pokemon-info-container {
@@ -322,29 +462,6 @@
             display: none;
         }
         
-        .status-indicator {
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-            font-size: 0.7rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            z-index: 1;
-        }
-        
-        .status-indicator.seen {
-            background-color: #1e40af;
-            color: #93c5fd;
-        }
-        
-        .status-indicator.captured {
-            background-color: #065f46;
-            color: #86efac;
-        }
-
         /* Mobile devices in portrait */
         @media screen and (max-width: 767px) {
             .container {
@@ -389,8 +506,7 @@
             }
             
             .stat-item {
-                height: 70px;
-                padding: 0.75rem;
+                padding: 0.4rem;
             }
             
             .stat-value {
@@ -399,18 +515,12 @@
             
             .stats-container {
                 gap: 0.75rem;
+                padding: 0.6rem;
             }
             
             #searchInput {
                 padding: 0.6rem 0.8rem;
                 font-size: 1rem;
-            }
-            
-            .status-indicator {
-                font-size: 0.6rem;
-                padding: 0.15rem 0.4rem;
-                top: 0.3rem;
-                right: 0.3rem;
             }
         }
 
@@ -447,20 +557,20 @@
 
             .stats-container {
                 gap: 1.5rem;
+                padding: 1rem;
             }
 
             .stat-item {
                 min-width: 140px;
-                height: 90px;
-                padding: 1.25rem;
+                padding: 0.75rem;
             }
 
             .stat-value {
                 font-size: 1.75rem;
             }
-
-            .stat-label {
-                font-size: 1rem;
+            
+            .stat-emoji {
+                font-size: 1.25rem;
             }
         }
 
@@ -501,7 +611,7 @@
             <!-- <h1>Pokedex</h1> -->
             <h1>Pokémon Violet</h1>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search Pokémon by name or number...">
+                <input type="text" id="searchInput" placeholder="Search by name, number, or shiny status...">
                 <div class="stats-container">
                     <div class="stat-item">
                         <span class="stat-value" id="seenCount">0</span>
@@ -647,7 +757,9 @@
                 card.className = 'pokemon-card';
                 
                 // Add status classes for styling
-                if (pokemon.captured) {
+                if (pokemon.shiny) {
+                    card.classList.add('shiny');
+                } else if (pokemon.captured) {
                     card.classList.add('captured');
                 } else if (pokemon.seen) {
                     card.classList.add('seen');
@@ -732,9 +844,10 @@
                 }
             } else if (status === 'seen') {
                 pokemon.seen = !pokemon.seen;
-                // If unsetting seen, also unset captured
+                // If unsetting seen, also unset captured and shiny
                 if (!pokemon.seen) {
                     pokemon.captured = false;
+                    pokemon.shiny = false;
                 }
             } else if (status === 'shiny') {
                 // Initialize shiny property if it doesn't exist
@@ -742,6 +855,15 @@
                     pokemon.shiny = false;
                 }
                 pokemon.shiny = !pokemon.shiny;
+                
+                // If marking as shiny, ensure seen and captured are true
+                if (pokemon.shiny) {
+                    pokemon.seen = true;
+                    pokemon.captured = true;
+                } else {
+                    // If unmarking shiny, unmark captured but keep seen true
+                    pokemon.captured = false;
+                }
             }
 
             console.log('Updated pokemon:', pokemon);
@@ -754,9 +876,18 @@
         }
 
         function filterPokemon(searchTerm) {
+            searchTerm = searchTerm.toLowerCase().trim();
+            
+            // Special case for searching shiny Pokémon
+            if (searchTerm === 'shiny') {
+                const filtered = pokemonData.filter(pokemon => pokemon.shiny);
+                displayPokemon(filtered);
+                return;
+            }
+            
             const filtered = pokemonData.filter(pokemon => {
                 // Check name match
-                const nameMatch = pokemon.name.toLowerCase().includes(searchTerm.toLowerCase());
+                const nameMatch = pokemon.name.toLowerCase().includes(searchTerm);
                 
                 // Check ID match with padded format
                 const paddedId = pokemon.id.toString().padStart(3, '0');
