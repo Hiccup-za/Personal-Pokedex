@@ -9,7 +9,7 @@
     <style>
         :root {
             --primary-color: #ffffff;
-            --secondary-color: #dc2626;
+            --secondary-color: #4f46e5;
             --background-color: #000000;
             --card-background: #1a1a1a;
             --card-seen: #1e293b;
@@ -54,7 +54,6 @@
             background-color: var(--background-color);
             padding: 1rem 0;
             z-index: 100;
-            position: relative;
         }
 
         h1 {
@@ -166,7 +165,218 @@
             overflow: hidden;
             border-left: 0;
             box-sizing: border-box;
-            opacity: 0.7;
+        }
+
+        .pokemon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+        }
+
+        .pokemon-card.seen {
+            background-color: var(--card-seen);
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--seen-color), 0 0 10px rgba(96, 165, 250, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(160deg, 
+                rgba(30, 58, 138, 0.5) 0%,
+                rgba(96, 165, 250, 0.2) 100%);
+        }
+
+        .pokemon-card.seen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 85% 7%, rgba(147, 197, 253, 0.3) 0%, rgba(147, 197, 253, 0) 20%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.captured {
+            background-color: var(--card-captured);
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--captured-color), 0 0 10px rgba(74, 222, 128, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(160deg, 
+                rgba(6, 78, 59, 0.6) 0%,
+                rgba(5, 150, 105, 0.3) 100%);
+        }
+
+        .pokemon-card.captured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 85% 7%, rgba(134, 239, 172, 0.4) 0%, rgba(134, 239, 172, 0) 25%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.seen .pokemon-name {
+            color: #93c5fd;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.captured .pokemon-name {
+            color: #86efac;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.seen .pokemon-info,
+        .pokemon-card.captured .pokemon-info {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.seen .status-badges,
+        .pokemon-card.captured .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Shiny pokemon styling */
+        .pokemon-card.shiny {
+            background-color: #1a1a42;
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--shiny-color), 0 0 15px rgba(251, 191, 36, 0.6);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.25) 0%,
+                rgba(138, 43, 226, 0.2) 40%,
+                rgba(36, 36, 90, 0.7) 100%);
+        }
+
+        .pokemon-card.shiny::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.15),  /* Gold */
+                rgba(138, 43, 226, 0.15), /* Purple */
+                rgba(0, 191, 255, 0.15),  /* Blue */
+                rgba(50, 205, 50, 0.15),  /* Green */
+                rgba(255, 105, 180, 0.15) /* Pink */
+            );
+            background-size: 300% 300%;
+            border-radius: 1rem;
+            z-index: 1;
+            pointer-events: none;
+            animation: gradient 10s linear infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-card.shiny {
+            position: relative;
+        }
+
+        .pokemon-card.shiny::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.shiny .pokemon-name {
+            color: #fef3c7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.shiny .pokemon-info {
+            position: relative;
+            z-index: 2;
+            color: #fdba74;
+        }
+
+        .pokemon-card.shiny .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.shiny:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6), 0 0 0 2px var(--shiny-color);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 50% 100%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            75% {
+                background-position: 50% 0%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .pokemon-card:active {
+            transform: scale(0.98);
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .pokemon-card.seen:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.6), 0 0 0 2px var(--seen-color);
+        }
+
+        .pokemon-card.captured:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.6), 0 0 0 2px var(--captured-color);
+        }
+
+        .pokemon-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            width: 100%;
+            min-width: 0;
         }
 
         .pokemon-name {
@@ -183,13 +393,9 @@
             text-overflow: ellipsis;
         }
 
-        .pokemon-info-container {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            flex: 1;
-            width: 100%;
-            min-width: 0;
+        .pokemon-info {
+            color: #9ca3af;
+            font-size: 1rem;
         }
 
         .status-badges {
@@ -211,58 +417,51 @@
             cursor: pointer;
         }
 
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: #4b5563;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark.active {
+            background-color: #10b981;
+        }
+
+        .checkmark::before {
+            content: "✓";
+            color: white;
+            font-size: 16px;
+        }
+
         .emoji-icon {
             font-size: 1.5rem;
             opacity: 0.4;
             transition: opacity 0.2s ease, transform 0.2s ease;
             filter: grayscale(100%);
         }
-
-        .back-button {
-            position: absolute;
-            left: 1rem;
-            top: 1rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            background-color: var(--card-background);
-            border-radius: 0.5rem;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        
+        .emoji-icon.active {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
         }
 
-        .coming-soon-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+        .pokemon-card::after {
+            display: none;
+        }
+
+        .pokemon-card.seen::after {
+            display: none;
+        }
+
+        .pokemon-card.captured::after {
+            display: none;
         }
         
-        .coming-soon-message {
-            background-color: var(--card-background);
-            border-radius: 1rem;
-            padding: 2rem;
-            max-width: 90%;
-            width: 500px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(63, 63, 70, 0.5);
-        }
-        
-        .coming-soon-message h2 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
         /* Mobile devices in portrait */
         @media screen and (max-width: 767px) {
             .container {
@@ -283,6 +482,17 @@
                 font-size: 0.9rem;
             }
 
+            .pokemon-info {
+                font-size: 0.75rem;
+                line-height: 1.2;
+            }
+
+            .status-badges {
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 0.5rem;
+            }
+            
             .stat-emoji {
                 font-size: 0.9rem;
             }
@@ -314,6 +524,56 @@
             }
         }
 
+        /* iPad/tablets in portrait */
+        @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px),
+        screen and (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .pokemon-grid {
+                grid-template-columns: repeat(3, 1fr) !important; /* 3 columns for iPad, with higher specificity */
+                gap: 1rem;
+            }
+
+            .pokemon-card {
+                padding: 0.85rem;
+            }
+
+            .pokemon-name {
+                font-size: 1.2rem;
+            }
+
+            .info-label {
+                font-size: 1.2rem;
+            }
+
+            .badge {
+                padding: 0.75rem 1.25rem;
+                font-size: 1.1rem;
+            }
+
+            .stats-container {
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+
+            .stat-item {
+                min-width: 140px;
+                padding: 0.75rem;
+            }
+
+            .stat-value {
+                font-size: 1.75rem;
+            }
+            
+            .stat-emoji {
+                font-size: 1.25rem;
+            }
+        }
+
         /* Larger screens */
         @media screen and (min-width: 1025px) {
             .pokemon-grid {
@@ -334,23 +594,197 @@
             .pokemon-name {
                 font-size: 1rem;
             }
+            
+            .pokemon-info {
+                font-size: 0.85rem;
+            }
+            
+            .emoji-icon {
+                font-size: 1.25rem;
+            }
+        }
+
+        .pokemon-card.exclusive-violet {
+            opacity: 0.75;
+            cursor: not-allowed;
+            background-color: rgba(220, 38, 38, 0.1);
+            border: 1px solid #ef4444;
+            position: relative;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+        }
+
+        .pokemon-card.exclusive {
+            position: relative;
+            border: 1px solid #6366f1;
+            background-color: rgba(79, 70, 229, 0.1);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+        }
+
+        .pokemon-card.exclusive:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        .pokemon-card.exclusive.seen,
+        .pokemon-card.exclusive.captured,
+        .pokemon-card.exclusive.shiny {
+            position: relative;
+            border: 1px solid #6366f1;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+        }
+        
+        .pokemon-card.exclusive-violet:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+
+        .lock-icon {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.25rem;
+            color: #ef4444;
+            z-index: 10;
+        }
+        
+        .unlock-icon {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.25rem;
+            color: #6366f1;
+            z-index: 10;
+        }
+
+        .pokemon-card.exclusive-violet .status-badges .badge {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .pokemon-card.exclusive-violet .pokemon-name {
+            color: #fca5a5;
+        }
+
+        .pokemon-card.exclusive.shiny {
+            background-color: #1a1a42;
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--shiny-color), 0 0 15px rgba(251, 191, 36, 0.6);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.25) 0%,
+                rgba(138, 43, 226, 0.2) 40%,
+                rgba(36, 36, 90, 0.7) 100%);
+            border: 1px solid #6366f1;
+        }
+
+        .pokemon-card.exclusive.shiny::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.15),  /* Gold */
+                rgba(138, 43, 226, 0.15), /* Purple */
+                rgba(0, 191, 255, 0.15),  /* Blue */
+                rgba(50, 205, 50, 0.15),  /* Green */
+                rgba(255, 105, 180, 0.15) /* Pink */
+            );
+            background-size: 300% 300%;
+            border-radius: 1rem;
+            z-index: 1;
+            pointer-events: none;
+            animation: gradient 10s linear infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-card.exclusive.shiny::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.exclusive.shiny .pokemon-name {
+            color: #fef3c7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.exclusive.shiny .pokemon-info {
+            position: relative;
+            z-index: 2;
+            color: #fdba74;
+        }
+
+        .pokemon-card.exclusive.shiny .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.exclusive.shiny:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6), 0 0 0 2px var(--shiny-color);
+        }
+
+        .pokemon-card.exclusive.shiny .unlock-icon {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 1.25rem;
+            color: #6366f1;
+            z-index: 10;
+        }
+
+        .pokemon-card.exclusive.seen {
+            background-color: var(--card-seen);
+            background-image: linear-gradient(160deg, 
+                rgba(30, 58, 138, 0.5) 0%,
+                rgba(79, 70, 229, 0.3) 100%);
+        }
+
+        .pokemon-card.exclusive.captured {
+            background-color: var(--card-captured);
+            background-image: linear-gradient(160deg, 
+                rgba(6, 78, 59, 0.6) 0%,
+                rgba(79, 70, 229, 0.3) 100%);
+        }
+
+        .pokemon-card.exclusive.seen:hover,
+        .pokemon-card.exclusive.captured:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="back-button" id="backButton">&larr;</div>
+            <!-- <h1>Pokedex</h1> -->
             <h1>Pokémon Scarlet</h1>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search by name, number, or shiny status..." disabled>
+                <input type="text" id="searchInput" placeholder="Search by name, number, shiny, or exclusive...">
                 <div class="stats-container">
                     <div class="stat-item">
                         <span class="stat-value" id="seenCount">0</span>
                         <span class="stat-emoji">👀 Seen</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-value" id="capturedCount">0 / 400</span>
+                        <span class="stat-value" id="capturedCount">0</span>
                         <span class="stat-emoji">📦 Captured</span>
                     </div>
                     <div class="stat-item">
@@ -363,70 +797,424 @@
         <div class="pokemon-grid" id="pokemonGrid"></div>
     </div>
 
-    <div class="coming-soon-overlay" id="comingSoonOverlay">
-        <div class="coming-soon-message">
-            <h2>Coming Soon</h2>
-            <p>The Pokémon Scarlet Pokedex data is unavailable.
-            <p></p>You can see placeholder cards for now.</p>
-            <p style="margin-top: 1rem;"><button id="closeOverlay" style="padding: 0.5rem 1rem; background-color: var(--secondary-color); border: none; border-radius: 0.5rem; color: white; cursor: pointer;">View Placeholders</button></p>
-        </div>
-    </div>
-
     <script>
-        // Generate placeholder data for 400 Pokémon
-        const placeholderPokemon = [];
-        for (let i = 1; i <= 400; i++) {
-            placeholderPokemon.push({
-                id: i,
-                name: `#${i.toString().padStart(3, '0')}`,
-                seen: false,
-                captured: false,
-                shiny: false
-            });
+        // Remove the orientation lock function
+        let pokemonData = [];
+
+        // Remove hardcoded exclusives lists as they're already in the JSON file
+
+        async function loadPokemonData() {
+            try {
+                console.log('Starting to load Pokémon data in Scarlet');
+                // Try to load saved data from localStorage first
+                const savedData = localStorage.getItem('scarletPokemonData');
+                console.log('Data from localStorage:', savedData ? 'Found data' : 'No data found');
+                if (savedData) {
+                    pokemonData = JSON.parse(savedData);
+                    
+                    // Ensure all pokemon have the shiny property
+                    pokemonData.forEach(pokemon => {
+                        if (pokemon.shiny === undefined) {
+                            pokemon.shiny = false;
+                        }
+                    });
+                    
+                    displayPokemon(pokemonData);
+                    return;
+                }
+
+                // If no saved data, load from JSON file
+                console.log('Fetching data from scarlet-violet.json');
+                
+                // First try to check if the file exists with a HEAD request
+                try {
+                    const checkResponse = await fetch('./data/scarlet-violet.json', { method: 'HEAD' });
+                    console.log('JSON file exists:', checkResponse.ok, 'Status:', checkResponse.status);
+                    if (!checkResponse.ok) {
+                        console.error('File not found or inaccessible');
+                        return;
+                    }
+                } catch (fileError) {
+                    console.error('Error checking file:', fileError);
+                    return;
+                }
+                
+                const response = await fetch('./data/scarlet-violet.json');
+                if (!response.ok) {
+                    console.error(`Error fetching JSON: ${response.status} ${response.statusText}`);
+                    return;
+                }
+                const data = await response.json();
+                console.log('JSON data loaded:', data ? 'Success' : 'Failed');
+                console.log('Pokemon count:', data.pokemon ? data.pokemon.length : 0);
+                // Log the first few Pokémon to see their structure
+                if (data.pokemon && data.pokemon.length > 0) {
+                    console.log('First few Pokémon:', JSON.stringify(data.pokemon.slice(0, 3)));
+                }
+                pokemonData = data.pokemon;
+                
+                // Initialize shiny property if it doesn't exist
+                pokemonData.forEach(pokemon => {
+                    if (pokemon.shiny === undefined) {
+                        pokemon.shiny = false;
+                    }
+                });
+                
+                // Check if the Pokemon data is valid
+                if (!pokemonData || pokemonData.length === 0) {
+                    console.warn('No Pokémon data found in the JSON file.');
+                    return; // Exit early when no data is available
+                }
+                
+                displayPokemon(pokemonData);
+                
+                // Save the data
+                savePokemonData();
+            } catch (error) {
+                console.error('Error loading Pokémon data:', error);
+                console.error('Error details:', error.message, error.stack);
+                // Don't create sample data as fallback, just return
+                return;
+            }
         }
 
-        function displayPlaceholderPokemon() {
+        function savePokemonData() {
+            try {
+                console.log('Saving Pokemon data to localStorage');
+                // Check exclusive parameters before saving
+                const scarletCount = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet").length;
+                const violetCount = pokemonData.filter(pokemon => pokemon.exclusive === "violet").length;
+                console.log(`Saving data with ${scarletCount} Scarlet exclusives and ${violetCount} Violet exclusives`);
+                console.log(`Total Pokemon count: ${pokemonData.length}`);
+                
+                localStorage.setItem('scarletPokemonData', JSON.stringify(pokemonData));
+                console.log('Data saved to localStorage with key: scarletPokemonData');
+                // Update game stats for the home page
+                updateGameStats();
+            } catch (error) {
+                console.error('Error saving Pokémon data:', error);
+                console.error('Error details:', error.message, error.stack);
+            }
+        }
+
+        // New function to update the game stats in the home page data
+        function updateGameStats() {
+            try {
+                // Get user games from localStorage
+                const savedGames = localStorage.getItem('userGames');
+                if (savedGames) {
+                    const userGames = JSON.parse(savedGames);
+                    
+                    // Find the Scarlet game
+                    const scarletGame = userGames.find(game => game.type === 'scarlet');
+                    if (scarletGame) {
+                        // Count seen and captured Pokémon
+                        const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+                        const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+                        const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+                        const totalCount = pokemonData.length;
+                        
+                        // Update the game stats
+                        scarletGame.stats = {
+                            seen: seenCount,
+                            captured: capturedCount,
+                            shiny: shinyCount,
+                            total: totalCount
+                        };
+                        
+                        // Save back to localStorage
+                        localStorage.setItem('userGames', JSON.stringify(userGames));
+                    }
+                }
+            } catch (error) {
+                console.error('Error updating game stats:', error);
+            }
+        }
+
+        function displayPokemon(pokemonList) {
+            console.log(`Displaying ${pokemonList.length} Pokemon`);
+            // Log the first few items to inspect what's being displayed
+            if (pokemonList.length > 0) {
+                console.log('First few Pokemon to display:', JSON.stringify(pokemonList.slice(0, 3)));
+            }
+            
             const grid = document.getElementById('pokemonGrid');
             grid.innerHTML = '';
 
-            placeholderPokemon.forEach(pokemon => {
+            // Update stats
+            const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+            const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+            const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+            const totalCount = pokemonData.length;
+            
+            console.log(`Stats - Seen: ${seenCount}, Captured: ${capturedCount}, Shiny: ${shinyCount}, Total: ${totalCount}`);
+            
+            document.getElementById('seenCount').textContent = seenCount;
+            document.getElementById('capturedCount').textContent = `${capturedCount} / ${totalCount}`;
+            document.getElementById('shinyCount').textContent = shinyCount;
+
+            if (pokemonList.length === 0) {
+                console.log('No Pokemon to display, showing no results message');
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'No Pokémon found matching your search.';
+                grid.appendChild(noResults);
+                return;
+            }
+
+            // Debug - Log exclusives count
+            const scarletCount = pokemonList.filter(pokemon => pokemon.exclusive === "scarlet").length;
+            const violetCount = pokemonList.filter(pokemon => pokemon.exclusive === "violet").length;
+            console.log(`Found ${scarletCount} Scarlet exclusives and ${violetCount} Violet exclusives`);
+
+            pokemonList.forEach(pokemon => {
+                // Log each Pokemon's data for debugging
+                console.log(`Creating card for Pokemon: ${JSON.stringify(pokemon)}`);
+                
                 const card = document.createElement('div');
                 card.className = 'pokemon-card';
                 
+                // Check for exclusive Pokémon using the exclusive parameter
+                const isScarletExclusive = pokemon.exclusive === "scarlet";
+                const isVioletExclusive = pokemon.exclusive === "violet";
+                
+                // Add status classes for styling
+                if (isScarletExclusive) {
+                    card.classList.add('exclusive');
+                    // Apply appropriate status classes for Scarlet exclusives too
+                    if (pokemon.shiny) {
+                        card.classList.add('shiny');
+                    } else if (pokemon.captured) {
+                        card.classList.add('captured');
+                    } else if (pokemon.seen) {
+                        card.classList.add('seen');
+                    }
+                } else if (isVioletExclusive) {
+                    card.classList.add('exclusive-violet');
+                    // Apply seen/captured/shiny classes for Violet exclusives
+                    if (pokemon.shiny) {
+                        card.classList.add('shiny');
+                    } else if (pokemon.captured) {
+                        card.classList.add('captured');
+                    } else if (pokemon.seen) {
+                        card.classList.add('seen');
+                    }
+                } else if (pokemon.shiny) {
+                    card.classList.add('shiny');
+                } else if (pokemon.captured) {
+                    card.classList.add('captured');
+                } else if (pokemon.seen) {
+                    card.classList.add('seen');
+                }
+
+                // Create the HTML content with explicit lock/unlock icons when needed
+                let lockIconHtml = '';
+                if (isVioletExclusive) {
+                    lockIconHtml = '<span class="lock-icon" style="display:block;position:absolute;top:0.5rem;right:0.5rem;font-size:1.25rem;color:#ef4444;z-index:10;">🔐</span>';
+                }
+                
+                let unlockIconHtml = '';
+                if (isScarletExclusive) {
+                    unlockIconHtml = '<span class="unlock-icon" style="display:block;position:absolute;top:0.5rem;right:0.5rem;font-size:1.25rem;color:#6366f1;z-index:10;">🔓</span>';
+                }
+                
                 card.innerHTML = `
                     <div class="pokemon-info-container">
-                        <div class="pokemon-name">${pokemon.name}</div>
+                        ${lockIconHtml}
+                        ${unlockIconHtml}
+                        <div class="pokemon-name">#${pokemon.id.toString().padStart(3, '0')} ${pokemon.name}</div>
+                        ${pokemon.evolution_level || pokemon.evolution_criteria ? `
+                        <div class="pokemon-info">
+                            ${pokemon.evolution_level ? `Evolves at level ${pokemon.evolution_level}` : pokemon.evolution_criteria}
+                        </div>
+                        ` : ''}
                     </div>
                     <div class="status-badges">
-                        <div class="badge">
-                            <span class="emoji-icon">👀</span>
+                        <div class="badge" data-id="${pokemon.id}" data-status="seen">
+                            <span class="emoji-icon ${pokemon.seen ? 'active' : ''}">👀</span>
                         </div>
-                        <div class="badge">
-                            <span class="emoji-icon">📦</span>
+                        <div class="badge" data-id="${pokemon.id}" data-status="captured">
+                            <span class="emoji-icon ${pokemon.captured ? 'active' : ''}">📦</span>
                         </div>
-                        <div class="badge">
-                            <span class="emoji-icon">✨</span>
+                        <div class="badge" data-id="${pokemon.id}" data-status="shiny">
+                            <span class="emoji-icon ${pokemon.shiny ? 'active' : ''}">✨</span>
                         </div>
                     </div>
                 `;
+
+                // Add touch event listeners for better iPad interaction
+                card.addEventListener('touchstart', () => {
+                    if (!isVioletExclusive) {
+                        card.style.transform = 'scale(0.98)';
+                    }
+                });
+
+                card.addEventListener('touchend', () => {
+                    card.style.transform = '';
+                });
+
+                // Add click handlers for status badges only if not exclusive to Violet
+                if (!isVioletExclusive) {
+                    const badges = card.querySelectorAll('.badge');
+                    badges.forEach(badge => {
+                        badge.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const id = parseInt(badge.dataset.id);
+                            const status = badge.dataset.status;
+                            togglePokemonStatus(id, status);
+                        });
+                    });
+
+                    // Add click handler for the emoji icons
+                    const emojiIcons = card.querySelectorAll('.emoji-icon');
+                    emojiIcons.forEach(icon => {
+                        icon.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const badge = icon.closest('.badge');
+                            const id = parseInt(badge.dataset.id);
+                            const status = badge.dataset.status;
+                            togglePokemonStatus(id, status);
+                        });
+                    });
+                }
 
                 grid.appendChild(card);
             });
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Display the placeholder Pokémon
-            displayPlaceholderPokemon();
+        function togglePokemonStatus(id, status) {
+            // Find pokemon by string ID comparison
+            const pokemon = pokemonData.find(p => String(p.id) === String(id));
+            if (!pokemon) {
+                console.error('Pokemon not found:', id);
+                return;
+            }
+
+            if (status === 'captured') {
+                pokemon.captured = !pokemon.captured;
+                // If marking as captured, ensure seen is true
+                if (pokemon.captured) {
+                    pokemon.seen = true;
+                } else {
+                    // If unmarking captured, also unset shiny
+                    pokemon.shiny = false;
+                }
+            } else if (status === 'seen') {
+                pokemon.seen = !pokemon.seen;
+                // If unsetting seen, also unset captured and shiny
+                if (!pokemon.seen) {
+                    pokemon.captured = false;
+                    pokemon.shiny = false;
+                }
+            } else if (status === 'shiny') {
+                // Initialize shiny property if it doesn't exist
+                if (pokemon.shiny === undefined) {
+                    pokemon.shiny = false;
+                }
+                pokemon.shiny = !pokemon.shiny;
+                
+                // If marking as shiny, ensure seen and captured are true
+                if (pokemon.shiny) {
+                    pokemon.seen = true;
+                    pokemon.captured = true;
+                }
+            }
+
+            // Save the updated data
+            savePokemonData();
+
+            // Re-display the current filtered list
+            const searchTerm = document.getElementById('searchInput').value;
+            filterPokemon(searchTerm);
+        }
+
+        function filterPokemon(searchTerm) {
+            searchTerm = searchTerm.toLowerCase().trim();
             
-            // Add click handler for the back button
-            document.getElementById('backButton').addEventListener('click', () => {
+            // Special case for searching shiny Pokémon
+            if (searchTerm === 'shiny') {
+                const filtered = pokemonData.filter(pokemon => pokemon.shiny);
+                displayPokemon(filtered);
+                return;
+            }
+            
+            // Special case for searching exclusive Pokémon
+            if (searchTerm === 'exclusive') {
+                const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet");
+                console.log(`Found ${filtered.length} Scarlet exclusives for 'exclusive' search`);
+                displayPokemon(filtered);
+                return;
+            }
+            
+            // Special case for searching locked Pokémon (Violet exclusives)
+            if (searchTerm === 'locked') {
+                const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "violet");
+                console.log(`Found ${filtered.length} Violet exclusives for 'locked' search`);
+                displayPokemon(filtered);
+                return;
+            }
+            
+            const filtered = pokemonData.filter(pokemon => {
+                // Check name match
+                const nameMatch = pokemon.name.toLowerCase().includes(searchTerm);
+                
+                // Check ID match with padded format
+                const paddedId = pokemon.id.toString().padStart(3, '0');
+                const idMatch = paddedId.includes(searchTerm);
+                
+                return nameMatch || idMatch;
+            });
+            displayPokemon(filtered);
+        }
+
+        // Debounce the search input to improve performance
+        let searchTimeout;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                filterPokemon(e.target.value);
+            }, 300);
+        });
+
+        // Load the data when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add a debug option to clear localStorage
+            console.log('Clearing localStorage for debug purposes');
+            localStorage.removeItem('scarletPokemonData');
+            
+            loadPokemonData();
+            
+            // Add a back button to navigate to the home page
+            const header = document.querySelector('header');
+            const backButton = document.createElement('div');
+            backButton.style.position = 'absolute';
+            backButton.style.left = '1rem';
+            backButton.style.top = '1rem';
+            backButton.style.fontSize = '1.5rem';
+            backButton.style.cursor = 'pointer';
+            backButton.style.padding = '0.5rem';
+            backButton.style.backgroundColor = 'var(--card-background)';
+            backButton.style.borderRadius = '0.5rem';
+            backButton.style.width = '40px';
+            backButton.style.height = '40px';
+            backButton.style.display = 'flex';
+            backButton.style.alignItems = 'center';
+            backButton.style.justifyContent = 'center';
+            backButton.innerHTML = '&larr;';
+            backButton.title = 'Back to Home';
+            
+            backButton.addEventListener('click', () => {
                 window.location.href = 'index.html';
             });
-
-            // Add click handler for the overlay close button
-            document.getElementById('closeOverlay').addEventListener('click', () => {
-                document.getElementById('comingSoonOverlay').style.display = 'none';
-            });
+            
+            header.style.position = 'relative';
+            header.appendChild(backButton);
+            
+            // Add search option for exclusive Pokémon
+            const searchInput = document.getElementById('searchInput');
+            searchInput.placeholder = "Search by name, number, shiny, or exclusive...";
         });
     </script>
     <!-- Vercel Analytics -->
@@ -435,4 +1223,4 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 </body>
-</html> 
+</html>

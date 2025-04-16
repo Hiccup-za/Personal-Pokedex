@@ -575,10 +575,9 @@
                 
                 // Initialize game stats by loading the Pokémon data if available
                 if (gameType === 'violet') {
-                    initializeGameStats('violet', './data/violet.json');
+                    initializeGameStats('violet', './data/scarlet-violet.json');
                 } else if (gameType === 'scarlet') {
-                    // For future implementation
-                    // initializeGameStats('scarlet', './data/scarlet.json');
+                    initializeGameStats('scarlet', './data/scarlet-violet.json');
                 }
                 
                 renderContent();
@@ -591,7 +590,8 @@
         async function initializeGameStats(gameType, jsonPath) {
             try {
                 // First check if we already have saved data
-                const savedData = localStorage.getItem('pokemonData');
+                const localStorageKey = gameType === 'scarlet' ? 'scarletPokemonData' : 'pokemonData';
+                const savedData = localStorage.getItem(localStorageKey);
                 if (savedData) {
                     const pokemonData = JSON.parse(savedData);
                     updateGameStatsFromPokemonData(gameType, pokemonData);
@@ -603,6 +603,15 @@
                 const data = await response.json();
                 if (data && data.pokemon && data.pokemon.length > 0) {
                     updateGameStatsFromPokemonData(gameType, data.pokemon);
+                    
+                    // Initialize empty data in localStorage
+                    const emptyData = data.pokemon.map(pokemon => ({
+                        ...pokemon,
+                        seen: false,
+                        captured: false,
+                        shiny: false
+                    }));
+                    localStorage.setItem(localStorageKey, JSON.stringify(emptyData));
                 }
             } catch (error) {
                 console.error(`Error initializing stats for ${gameType}:`, error);
@@ -877,36 +886,8 @@
                     console.error('Error resetting game data:', error);
                 }
             } else if (gameType === 'scarlet') {
-                // For future implementation
-                // Similar code for Scarlet when available
-                
-                // For now, just update the stats to 0
-                const gameIndex = userGames.findIndex(game => game.type === gameType);
-                if (gameIndex !== -1) {
-                    const totalCount = userGames[gameIndex].stats.total || 0;
-                    userGames[gameIndex].stats = {
-                        seen: 0,
-                        captured: 0,
-                        shiny: 0,
-                        total: totalCount
-                    };
-                    
-                    saveGames();
-                    renderContent();
-                }
-            }
-        }
-        
-        // Remove game
-        function removeGame(gameType, resetData) {
-            // Remove from userGames
-            userGames = userGames.filter(game => game.type !== gameType);
-            saveGames();
-            
-            // Reset data if requested
-            if (resetData && gameType === 'violet') {
                 try {
-                    const savedData = localStorage.getItem('pokemonData');
+                    const savedData = localStorage.getItem('scarletPokemonData');
                     if (savedData) {
                         const pokemonData = JSON.parse(savedData);
                         
@@ -918,10 +899,103 @@
                         });
                         
                         // Save back to localStorage
-                        localStorage.setItem('pokemonData', JSON.stringify(pokemonData));
+                        localStorage.setItem('scarletPokemonData', JSON.stringify(pokemonData));
+                        
+                        // Update game stats
+                        const gameIndex = userGames.findIndex(game => game.type === gameType);
+                        if (gameIndex !== -1) {
+                            userGames[gameIndex].stats = {
+                                seen: 0,
+                                captured: 0,
+                                shiny: 0,
+                                total: pokemonData.length
+                            };
+                            
+                            saveGames();
+                            renderContent();
+                        }
+                    } else {
+                        // If no Scarlet data found, just update the stats to 0
+                        const gameIndex = userGames.findIndex(game => game.type === gameType);
+                        if (gameIndex !== -1) {
+                            const totalCount = userGames[gameIndex].stats.total || 0;
+                            userGames[gameIndex].stats = {
+                                seen: 0,
+                                captured: 0,
+                                shiny: 0,
+                                total: totalCount
+                            };
+                            
+                            saveGames();
+                            renderContent();
+                        }
                     }
                 } catch (error) {
                     console.error('Error resetting game data:', error);
+                    // If error occurs, just update the stats to 0
+                    const gameIndex = userGames.findIndex(game => game.type === gameType);
+                    if (gameIndex !== -1) {
+                        const totalCount = userGames[gameIndex].stats.total || 0;
+                        userGames[gameIndex].stats = {
+                            seen: 0,
+                            captured: 0,
+                            shiny: 0,
+                            total: totalCount
+                        };
+                        
+                        saveGames();
+                        renderContent();
+                    }
+                }
+            }
+        }
+        
+        // Remove game
+        function removeGame(gameType, resetData) {
+            // Remove from userGames
+            userGames = userGames.filter(game => game.type !== gameType);
+            saveGames();
+            
+            // Reset data if requested
+            if (resetData) {
+                if (gameType === 'violet') {
+                    try {
+                        const savedData = localStorage.getItem('pokemonData');
+                        if (savedData) {
+                            const pokemonData = JSON.parse(savedData);
+                            
+                            // Reset all Pokémon data
+                            pokemonData.forEach(pokemon => {
+                                pokemon.seen = false;
+                                pokemon.captured = false;
+                                pokemon.shiny = false;
+                            });
+                            
+                            // Save back to localStorage
+                            localStorage.setItem('pokemonData', JSON.stringify(pokemonData));
+                        }
+                    } catch (error) {
+                        console.error('Error resetting game data:', error);
+                    }
+                } else if (gameType === 'scarlet') {
+                    try {
+                        const savedData = localStorage.getItem('scarletPokemonData');
+                        if (savedData) {
+                            const pokemonData = JSON.parse(savedData);
+                            
+                            // Reset all Pokémon data
+                            pokemonData.forEach(pokemon => {
+                                pokemon.seen = false;
+                                pokemon.captured = false;
+                                pokemon.shiny = false;
+                            });
+                            
+                            // Save back to localStorage
+                            localStorage.setItem('scarletPokemonData', JSON.stringify(pokemonData));
+                        }
+                    } catch (error) {
+                        console.error('Error resetting game data:', error);
+                    }
                 }
             }
             

@@ -6,7 +6,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 16,
-      "evolution_criteria": "Evolves at level 16"
+      "evolution_criteria": "Evolves at level 16",
+      "exclusive": null
     },
     {
       "id": "002",
@@ -14,7 +15,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 36,
-      "evolution_criteria": "Evolves at level 36"
+      "evolution_criteria": "Evolves at level 36",
+      "exclusive": null
     },
     {
       "id": "003",
@@ -910,7 +912,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": "Use a Dusk Stone to evolve"
+      "evolution_criteria": "Use a Dusk Stone to evolve",
+      "exclusive": "violet"
     },
     {
       "id": "115",
@@ -918,7 +921,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "116",
@@ -1110,7 +1114,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 26,
-      "evolution_criteria": "Evolves at level 26"
+      "evolution_criteria": "Evolves at level 26",
+      "exclusive": "violet"
     },
     {
       "id": "140",
@@ -1118,7 +1123,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "141",
@@ -1142,7 +1148,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 28,
-      "evolution_criteria": "Evolves at level 28"
+      "evolution_criteria": "Evolves at level 28",
+      "exclusive": "scarlet"
     },
     {
       "id": "144",
@@ -1150,7 +1157,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "145",
@@ -1326,7 +1334,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "167",
@@ -1334,7 +1343,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "168",
@@ -1806,7 +1816,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 34,
-      "evolution_criteria": "Evolves at level 34"
+      "evolution_criteria": "Evolves at level 34",
+      "exclusive": "scarlet"
     },
     {
       "id": "227",
@@ -1814,7 +1825,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "228",
@@ -2206,7 +2218,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 30,
-      "evolution_criteria": "Evolves at level 30"
+      "evolution_criteria": "Evolves at level 30",
+      "exclusive": "violet"
     },
     {
       "id": "277",
@@ -2214,7 +2227,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 50,
-      "evolution_criteria": "Evolves at level 50"
+      "evolution_criteria": "Evolves at level 50",
+      "exclusive": "violet"
     },
     {
       "id": "278",
@@ -2222,7 +2236,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "279",
@@ -2438,7 +2453,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 50,
-      "evolution_criteria": "Evolves at level 50"
+      "evolution_criteria": "Evolves at level 50",
+      "exclusive": "violet"
     },
     {
       "id": "306",
@@ -2446,7 +2462,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 60,
-      "evolution_criteria": "Evolves at level 60"
+      "evolution_criteria": "Evolves at level 60",
+      "exclusive": "violet"
     },
     {
       "id": "307",
@@ -2454,7 +2471,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "308",
@@ -2502,7 +2520,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "314",
@@ -2510,7 +2529,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "315",
@@ -2526,7 +2546,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 30,
-      "evolution_criteria": "Evolves at level 30"
+      "evolution_criteria": "Evolves at level 30",
+      "exclusive": "scarlet"
     },
     {
       "id": "317",
@@ -2534,7 +2555,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 55,
-      "evolution_criteria": "Evolves at level 55"
+      "evolution_criteria": "Evolves at level 55",
+      "exclusive": "scarlet"
     },
     {
       "id": "318",
@@ -2542,7 +2564,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "319",
@@ -2550,7 +2573,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "320",
@@ -2558,7 +2582,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "321",
@@ -2694,7 +2719,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 48,
-      "evolution_criteria": "Evolves at level 48"
+      "evolution_criteria": "Evolves at level 48",
+      "exclusive": "scarlet"
     },
     {
       "id": "338",
@@ -2702,7 +2728,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "339",
@@ -2710,7 +2737,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 37,
-      "evolution_criteria": "Evolves at level 37"
+      "evolution_criteria": "Evolves at level 37",
+      "exclusive": "violet"
     },
     {
       "id": "340",
@@ -2718,7 +2746,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "341",
@@ -2958,7 +2987,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 50,
-      "evolution_criteria": "Evolves at level 50"
+      "evolution_criteria": "Evolves at level 50",
+      "exclusive": "scarlet"
     },
     {
       "id": "371",
@@ -2966,7 +2996,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": 64,
-      "evolution_criteria": "Evolves at level 64"
+      "evolution_criteria": "Evolves at level 64",
+      "exclusive": "scarlet"
     },
     {
       "id": "372",
@@ -2974,7 +3005,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "373",
@@ -3006,7 +3038,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "377",
@@ -3014,7 +3047,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "378",
@@ -3022,7 +3056,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "379",
@@ -3030,7 +3065,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "380",
@@ -3038,7 +3074,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "381",
@@ -3046,7 +3083,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "382",
@@ -3054,7 +3092,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "383",
@@ -3062,7 +3101,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "384",
@@ -3070,7 +3110,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "385",
@@ -3078,7 +3119,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "386",
@@ -3086,7 +3128,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "387",
@@ -3094,7 +3137,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "388",
@@ -3174,7 +3218,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "398",
@@ -3182,7 +3227,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     },
     {
       "id": "399",
@@ -3190,7 +3236,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "scarlet"
     },
     {
       "id": "400",
@@ -3198,7 +3245,8 @@
       "seen": false,
       "captured": false,
       "evolution_level": null,
-      "evolution_criteria": null
+      "evolution_criteria": null,
+      "exclusive": "violet"
     }
   ]
 }
