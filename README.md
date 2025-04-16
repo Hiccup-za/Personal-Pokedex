@@ -1,2 +1,6 @@
-# Personal-Pokedex
-A personal pokedex tracker
+# Personal Pokedex
+
+A personal pokedex tracker.
+Currently supports:
+
+- Pokemon Violet

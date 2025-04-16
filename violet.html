@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Pokedex - Violet</title>
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #4f46e5;
+            --background-color: #000000;
+            --card-background: #1a1a1a;
+            --card-seen: #1e293b;
+            --card-captured: #1e3a8a;
+            --text-color: #f3f4f6;
+            --safe-area-inset-top: env(safe-area-inset-top);
+            --safe-area-inset-bottom: env(safe-area-inset-bottom);
+            --seen-color: #60a5fa;
+            --captured-color: #4ade80;
+            --shiny-color: #fbbf24;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--safe-area-inset-top);
+            padding-bottom: var(--safe-area-inset-bottom);
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            position: sticky;
+            top: 0;
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            z-index: 100;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            padding: 0.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            background-color: var(--card-background);
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            flex: 1;
+            height: 80px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        .stat-emoji {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            text-align: center;
+            margin-top: 0.25rem;
+        }
+
+        #searchInput {
+            padding: 0.75rem 1rem;
+            border: 2px solid #4b5563;
+            border-radius: 0.75rem;
+            width: 100%;
+            max-width: 500px;
+            font-size: 1.1rem;
+            background-color: var(--card-background);
+            color: var(--text-color);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        #searchInput::placeholder {
+            color: #9ca3af;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Default for tablets */
+            gap: 1rem;
+            padding: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-background);
+            border-radius: 1rem;
+            color: #9ca3af;
+            font-size: 1.2rem;
+        }
+
+        .pokemon-card {
+            background-color: var(--card-background);
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-left: 0;
+            box-sizing: border-box;
+        }
+
+        .pokemon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+        }
+
+        .pokemon-card.seen {
+            background-color: var(--card-seen);
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--seen-color);
+            border-radius: 1rem;
+        }
+
+        .pokemon-card.seen::before {
+            display: none;
+        }
+
+        .pokemon-card.captured {
+            background-color: var(--card-captured);
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--captured-color);
+            border-radius: 1rem;
+        }
+
+        .pokemon-card.captured::before {
+            display: none;
+        }
+
+        .pokemon-card.seen .pokemon-name {
+            color: #93c5fd;
+        }
+
+        .pokemon-card.captured .pokemon-name {
+            color: #86efac;
+        }
+
+        .pokemon-card:active {
+            transform: scale(0.98);
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .pokemon-card.seen:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4), 0 0 0 2px var(--seen-color);
+        }
+
+        .pokemon-card.captured:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.4), 0 0 0 2px var(--captured-color);
+        }
+
+        .pokemon-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .pokemon-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            line-height: 1.2;
+            padding-right: 15px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .pokemon-info {
+            color: #9ca3af;
+            font-size: 1rem;
+        }
+
+        .status-badges {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            color: #9ca3af;
+            font-size: 0.875rem;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: #4b5563;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark.active {
+            background-color: #10b981;
+        }
+
+        .checkmark::before {
+            content: "✓";
+            color: white;
+            font-size: 16px;
+        }
+
+        .emoji-icon {
+            font-size: 1.5rem;
+            opacity: 0.4;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            filter: grayscale(100%);
+        }
+        
+        .emoji-icon.active {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .pokemon-card::after {
+            display: none;
+        }
+
+        .pokemon-card.seen::after {
+            display: none;
+        }
+
+        .pokemon-card.captured::after {
+            display: none;
+        }
+        
+        .status-indicator {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: 1;
+        }
+        
+        .status-indicator.seen {
+            background-color: #1e40af;
+            color: #93c5fd;
+        }
+        
+        .status-indicator.captured {
+            background-color: #065f46;
+            color: #86efac;
+        }
+
+        /* Mobile devices in portrait */
+        @media screen and (max-width: 767px) {
+            .container {
+                padding: 0.75rem;
+            }
+
+            .pokemon-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+                gap: 0.75rem;
+                padding: 0.25rem;
+            }
+
+            .pokemon-card {
+                padding: 0.75rem;
+            }
+
+            .pokemon-name {
+                font-size: 0.9rem;
+            }
+
+            .pokemon-info {
+                font-size: 0.75rem;
+                line-height: 1.2;
+            }
+
+            .status-badges {
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 0.5rem;
+            }
+            
+            .stat-emoji {
+                font-size: 0.9rem;
+            }
+
+            .emoji-icon {
+                font-size: 1.1rem;
+            }
+            
+            .badge {
+                gap: 0;
+            }
+            
+            .stat-item {
+                height: 70px;
+                padding: 0.75rem;
+            }
+            
+            .stat-value {
+                font-size: 1.25rem;
+            }
+            
+            .stats-container {
+                gap: 0.75rem;
+            }
+            
+            #searchInput {
+                padding: 0.6rem 0.8rem;
+                font-size: 1rem;
+            }
+            
+            .status-indicator {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.4rem;
+                top: 0.3rem;
+                right: 0.3rem;
+            }
+        }
+
+        /* iPad/tablets in portrait */
+        @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px),
+        screen and (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .pokemon-grid {
+                grid-template-columns: repeat(3, 1fr) !important; /* 3 columns for iPad, with higher specificity */
+                gap: 1rem;
+            }
+
+            .pokemon-card {
+                padding: 0.85rem;
+            }
+
+            .pokemon-name {
+                font-size: 1.2rem;
+            }
+
+            .info-label {
+                font-size: 1.2rem;
+            }
+
+            .badge {
+                padding: 0.75rem 1.25rem;
+                font-size: 1.1rem;
+            }
+
+            .stats-container {
+                gap: 1.5rem;
+            }
+
+            .stat-item {
+                min-width: 140px;
+                height: 90px;
+                padding: 1.25rem;
+            }
+
+            .stat-value {
+                font-size: 1.75rem;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+            }
+        }
+
+        /* Larger screens */
+        @media screen and (min-width: 1025px) {
+            .pokemon-grid {
+                grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+                gap: 1.25rem;
+            }
+            
+            .container {
+                padding: 2rem;
+                max-width: 1400px;
+            }
+            
+            .pokemon-card {
+                padding: 0.85rem;
+                height: 100%;
+            }
+            
+            .pokemon-name {
+                font-size: 1rem;
+            }
+            
+            .pokemon-info {
+                font-size: 0.85rem;
+            }
+            
+            .emoji-icon {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- <h1>Pokedex</h1> -->
+            <h1>Pokémon Violet</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search Pokémon by name or number...">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="seenCount">0</span>
+                        <span class="stat-emoji">👀 Seen</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="capturedCount">0</span>
+                        <span class="stat-emoji">📦 Captured</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="shinyCount">0</span>
+                        <span class="stat-emoji">✨ Shiny</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="pokemon-grid" id="pokemonGrid"></div>
+    </div>
+
+    <script>
+        // Remove the orientation lock function
+        let pokemonData = [];
+
+        async function loadPokemonData() {
+            try {
+                // Try to load saved data from localStorage first
+                const savedData = localStorage.getItem('pokemonData');
+                if (savedData) {
+                    pokemonData = JSON.parse(savedData);
+                    // Ensure all pokemon have the shiny property
+                    pokemonData.forEach(pokemon => {
+                        if (pokemon.shiny === undefined) {
+                            pokemon.shiny = false;
+                        }
+                    });
+                    displayPokemon(pokemonData);
+                    return;
+                }
+
+                // If no saved data, load from JSON file
+                const response = await fetch('./data/violet.json');
+                const data = await response.json();
+                pokemonData = data.pokemon;
+                
+                // Initialize shiny property for each pokemon
+                pokemonData.forEach(pokemon => {
+                    if (pokemon.shiny === undefined) {
+                        pokemon.shiny = false;
+                    }
+                });
+                
+                // If pokemonData is still empty or undefined, create sample data
+                if (!pokemonData || pokemonData.length === 0) {
+                    console.warn('No Pokémon data found in the JSON file. Creating sample data.');
+                    pokemonData = [
+                        { id: 1, name: "Sprigatito", evolution_level: 16, seen: false, captured: false, shiny: false },
+                        { id: 2, name: "Floragato", evolution_level: 36, seen: false, captured: false, shiny: false },
+                        { id: 3, name: "Meowscarada", seen: false, captured: false, shiny: false }
+                    ];
+                }
+                
+                displayPokemon(pokemonData);
+            } catch (error) {
+                console.error('Error loading Pokémon data:', error);
+                // Create sample data as fallback
+                pokemonData = [
+                    { id: 1, name: "Sprigatito", evolution_level: 16, seen: false, captured: false, shiny: false },
+                    { id: 2, name: "Floragato", evolution_level: 36, seen: false, captured: false, shiny: false },
+                    { id: 3, name: "Meowscarada", seen: false, captured: false, shiny: false }
+                ];
+                displayPokemon(pokemonData);
+            }
+        }
+
+        function savePokemonData() {
+            try {
+                localStorage.setItem('pokemonData', JSON.stringify(pokemonData));
+                // Update game stats for the home page
+                updateGameStats();
+            } catch (error) {
+                console.error('Error saving Pokémon data:', error);
+            }
+        }
+
+        // New function to update the game stats in the home page data
+        function updateGameStats() {
+            try {
+                // Get user games from localStorage
+                const savedGames = localStorage.getItem('userGames');
+                if (savedGames) {
+                    const userGames = JSON.parse(savedGames);
+                    
+                    // Find the Violet game
+                    const violetGame = userGames.find(game => game.type === 'violet');
+                    if (violetGame) {
+                        // Count seen and captured Pokémon
+                        const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+                        const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+                        const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+                        const totalCount = pokemonData.length;
+                        
+                        // Update the game stats
+                        violetGame.stats = {
+                            seen: seenCount,
+                            captured: capturedCount,
+                            shiny: shinyCount,
+                            total: totalCount
+                        };
+                        
+                        // Save back to localStorage
+                        localStorage.setItem('userGames', JSON.stringify(userGames));
+                    }
+                }
+            } catch (error) {
+                console.error('Error updating game stats:', error);
+            }
+        }
+
+        function displayPokemon(pokemonList) {
+            const grid = document.getElementById('pokemonGrid');
+            grid.innerHTML = '';
+
+            // Update stats
+            const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+            const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+            const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+            const totalCount = pokemonData.length;
+            
+            document.getElementById('seenCount').textContent = seenCount;
+            document.getElementById('capturedCount').textContent = `${capturedCount} / ${totalCount}`;
+            document.getElementById('shinyCount').textContent = shinyCount;
+
+            if (pokemonList.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'No Pokémon found matching your search.';
+                grid.appendChild(noResults);
+                return;
+            }
+
+            pokemonList.forEach(pokemon => {
+                const card = document.createElement('div');
+                card.className = 'pokemon-card';
+                
+                // Add status classes for styling
+                if (pokemon.captured) {
+                    card.classList.add('captured');
+                } else if (pokemon.seen) {
+                    card.classList.add('seen');
+                }
+
+                card.innerHTML = `
+                    <div class="pokemon-info-container">
+                        <div class="pokemon-name">#${pokemon.id.toString().padStart(3, '0')} ${pokemon.name}</div>
+                        ${pokemon.evolution_level || pokemon.evolution_criteria ? `
+                        <div class="pokemon-info">
+                            ${pokemon.evolution_level ? `Evolves at level ${pokemon.evolution_level}` : pokemon.evolution_criteria}
+                        </div>
+                        ` : ''}
+                    </div>
+                    <div class="status-badges">
+                        <div class="badge" data-id="${pokemon.id}" data-status="seen">
+                            <span class="emoji-icon ${pokemon.seen ? 'active' : ''}">👀</span>
+                        </div>
+                        <div class="badge" data-id="${pokemon.id}" data-status="captured">
+                            <span class="emoji-icon ${pokemon.captured ? 'active' : ''}">📦</span>
+                        </div>
+                        <div class="badge" data-id="${pokemon.id}" data-status="shiny">
+                            <span class="emoji-icon ${pokemon.shiny ? 'active' : ''}">✨</span>
+                        </div>
+                    </div>
+                `;
+
+                // Add touch event listeners for better iPad interaction
+                card.addEventListener('touchstart', () => {
+                    card.style.transform = 'scale(0.98)';
+                });
+
+                card.addEventListener('touchend', () => {
+                    card.style.transform = '';
+                });
+
+                // Add click handlers for status badges
+                const badges = card.querySelectorAll('.badge');
+                badges.forEach(badge => {
+                    badge.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Badge clicked:', badge.dataset.id, badge.dataset.status);
+                        const id = parseInt(badge.dataset.id);
+                        const status = badge.dataset.status;
+                        togglePokemonStatus(id, status);
+                    });
+                });
+
+                // Add click handler for the emoji icons
+                const emojiIcons = card.querySelectorAll('.emoji-icon');
+                emojiIcons.forEach(icon => {
+                    icon.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const badge = icon.closest('.badge');
+                        console.log('Emoji clicked:', badge.dataset.id, badge.dataset.status);
+                        const id = parseInt(badge.dataset.id);
+                        const status = badge.dataset.status;
+                        togglePokemonStatus(id, status);
+                    });
+                });
+
+                grid.appendChild(card);
+            });
+        }
+
+        function togglePokemonStatus(id, status) {
+            console.log('Toggling status:', id, status);
+            // Convert id to number to ensure consistent comparison
+            const pokemon = pokemonData.find(p => Number(p.id) === Number(id));
+            if (!pokemon) {
+                console.error('Pokemon not found:', id);
+                return;
+            }
+
+            if (status === 'captured') {
+                pokemon.captured = !pokemon.captured;
+                // If marking as captured, ensure seen is true
+                if (pokemon.captured) {
+                    pokemon.seen = true;
+                }
+            } else if (status === 'seen') {
+                pokemon.seen = !pokemon.seen;
+                // If unsetting seen, also unset captured
+                if (!pokemon.seen) {
+                    pokemon.captured = false;
+                }
+            } else if (status === 'shiny') {
+                // Initialize shiny property if it doesn't exist
+                if (pokemon.shiny === undefined) {
+                    pokemon.shiny = false;
+                }
+                pokemon.shiny = !pokemon.shiny;
+            }
+
+            console.log('Updated pokemon:', pokemon);
+            // Save the updated data
+            savePokemonData();
+
+            // Re-display the current filtered list
+            const searchTerm = document.getElementById('searchInput').value;
+            filterPokemon(searchTerm);
+        }
+
+        function filterPokemon(searchTerm) {
+            const filtered = pokemonData.filter(pokemon => {
+                // Check name match
+                const nameMatch = pokemon.name.toLowerCase().includes(searchTerm.toLowerCase());
+                
+                // Check ID match with padded format
+                const paddedId = pokemon.id.toString().padStart(3, '0');
+                const idMatch = paddedId.includes(searchTerm);
+                
+                return nameMatch || idMatch;
+            });
+            displayPokemon(filtered);
+        }
+
+        // Debounce the search input to improve performance
+        let searchTimeout;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                filterPokemon(e.target.value);
+            }, 300);
+        });
+
+        // Load the data when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPokemonData();
+            
+            // Add a back button to navigate to the home page
+            const header = document.querySelector('header');
+            const backButton = document.createElement('div');
+            backButton.style.position = 'absolute';
+            backButton.style.left = '1rem';
+            backButton.style.top = '1rem';
+            backButton.style.fontSize = '1.5rem';
+            backButton.style.cursor = 'pointer';
+            backButton.style.padding = '0.5rem';
+            backButton.style.backgroundColor = 'var(--card-background)';
+            backButton.style.borderRadius = '0.5rem';
+            backButton.style.width = '40px';
+            backButton.style.height = '40px';
+            backButton.style.display = 'flex';
+            backButton.style.alignItems = 'center';
+            backButton.style.justifyContent = 'center';
+            backButton.innerHTML = '&larr;';
+            backButton.title = 'Back to Home';
+            
+            backButton.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+            
+            header.style.position = 'relative';
+            header.appendChild(backButton);
+        });
+    </script>
+</body>
+</html>

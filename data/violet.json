@@ -1,0 +1,3204 @@
+{
+  "pokemon": [
+    {
+      "id": "001",
+      "name": "Sprigatito",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 16,
+      "evolution_criteria": "Evolves at level 16"
+    },
+    {
+      "id": "002",
+      "name": "Floragato",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "003",
+      "name": "Meowscarada",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "004",
+      "name": "Fuecoco",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 16,
+      "evolution_criteria": "Evolves at level 16"
+    },
+    {
+      "id": "005",
+      "name": "Crocalor",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "006",
+      "name": "Skeledirge",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "007",
+      "name": "Quaxly",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 16,
+      "evolution_criteria": "Evolves at level 16"
+    },
+    {
+      "id": "008",
+      "name": "Quaxwell",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "009",
+      "name": "Quaquaval",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "010",
+      "name": "Lechonk",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "011",
+      "name": "Oinkologne",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "012",
+      "name": "Tarountula",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 15,
+      "evolution_criteria": "Evolves at level 15"
+    },
+    {
+      "id": "013",
+      "name": "Spidops",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "014",
+      "name": "Nymble",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "015",
+      "name": "Lokix",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "016",
+      "name": "Hoppip",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "017",
+      "name": "Skiploom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 27,
+      "evolution_criteria": "Evolves at level 27"
+    },
+    {
+      "id": "018",
+      "name": "Jumpluff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "019",
+      "name": "Fletchling",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 17,
+      "evolution_criteria": "Evolves at level 17"
+    },
+    {
+      "id": "020",
+      "name": "Fletchinder",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "021",
+      "name": "Talonflame",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "022",
+      "name": "Pawmi",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "023",
+      "name": "Pawmo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Walk 1000 steps in Let's Go mode, then level up"
+    },
+    {
+      "id": "024",
+      "name": "Pawmot",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "025",
+      "name": "Houndour",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "026",
+      "name": "Houndoom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "027",
+      "name": "Yungoos",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Evolves at level 20"
+    },
+    {
+      "id": "028",
+      "name": "Gumshoos",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "029",
+      "name": "Skwovet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "030",
+      "name": "Greedent",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "031",
+      "name": "Sunkern",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Sun Stone to evolve"
+    },
+    {
+      "id": "032",
+      "name": "Sunflora",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "033",
+      "name": "Kricketot",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 10,
+      "evolution_criteria": "Evolves at level 10"
+    },
+    {
+      "id": "034",
+      "name": "Kricketune",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "035",
+      "name": "Scatterbug",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 9,
+      "evolution_criteria": "Evolves at level 9"
+    },
+    {
+      "id": "036",
+      "name": "Spewpa",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 12,
+      "evolution_criteria": "Evolves at level 12"
+    },
+    {
+      "id": "037",
+      "name": "Vivillon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "038",
+      "name": "Combee",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 21,
+      "evolution_criteria": "Evolves at level 21"
+    },
+    {
+      "id": "039",
+      "name": "Vespiquen",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "040",
+      "name": "Rookidee",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "041",
+      "name": "Corvisquire",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "042",
+      "name": "Corviknight",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "043",
+      "name": "Happiny",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up while holding an Oval Stone during the day"
+    },
+    {
+      "id": "044",
+      "name": "Chansey",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up with high friendship"
+    },
+    {
+      "id": "045",
+      "name": "Blissey",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "046",
+      "name": "Azurill",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up with high friendship"
+    },
+    {
+      "id": "047",
+      "name": "Marill",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "048",
+      "name": "Azumarill",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "049",
+      "name": "Surskit",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 22,
+      "evolution_criteria": "Evolves at level 22"
+    },
+    {
+      "id": "050",
+      "name": "Masquerain",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "051",
+      "name": "Buizel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "052",
+      "name": "Floatzel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "053",
+      "name": "Wooper",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Evolves at level 20"
+    },
+    {
+      "id": "054",
+      "name": "Clodsire",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "055",
+      "name": "Psyduck",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "056",
+      "name": "Golduck",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "057",
+      "name": "Chewtle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 22,
+      "evolution_criteria": "Evolves at level 22"
+    },
+    {
+      "id": "058",
+      "name": "Drednaw",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "059",
+      "name": "Igglybuff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up with high friendship"
+    },
+    {
+      "id": "060",
+      "name": "Jigglypuff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Moon Stone to evolve"
+    },
+    {
+      "id": "061",
+      "name": "Wigglytuff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "062",
+      "name": "Ralts",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Evolves at level 20"
+    },
+    {
+      "id": "063",
+      "name": "Kirlia",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Dawn Stone on a male Kirlia to evolve"
+    },
+    {
+      "id": "064",
+      "name": "Gardevoir",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "065",
+      "name": "Gallade",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Gender Male & Use Dawn Stone"
+    },
+    {
+      "id": "066",
+      "name": "Drowzee",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "067",
+      "name": "Hypno",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "068",
+      "name": "Gastly",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "069",
+      "name": "Haunter",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Trade to evolve"
+    },
+    {
+      "id": "070",
+      "name": "Gengar",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "071",
+      "name": "Tandemaus",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "072",
+      "name": "Maushold",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "073",
+      "name": "Pichu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up with high friendship during the day"
+    },
+    {
+      "id": "074",
+      "name": "Pikachu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Thunder Stone to evolve"
+    },
+    {
+      "id": "075",
+      "name": "Raichu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "076",
+      "name": "Fidough",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "077",
+      "name": "Dachsbun",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "078",
+      "name": "Slakoth",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "079",
+      "name": "Vigoroth",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "080",
+      "name": "Slaking",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "081",
+      "name": "Bounsweet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "082",
+      "name": "Steenee",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up after learning the move Stomp"
+    },
+    {
+      "id": "083",
+      "name": "Tsareena",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "084",
+      "name": "Smoliv",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "085",
+      "name": "Dolliv",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "086",
+      "name": "Arboliva",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "087",
+      "name": "Bonsly",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up after learning the move Mimic"
+    },
+    {
+      "id": "088",
+      "name": "Sudowoodo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "089",
+      "name": "Rockruff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "090",
+      "name": "Lycanroc",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "091",
+      "name": "Rolycoly",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 15,
+      "evolution_criteria": "Evolves at level 15"
+    },
+    {
+      "id": "092",
+      "name": "Carkol",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "093",
+      "name": "Coalossal",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "094",
+      "name": "Shinx",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 15,
+      "evolution_criteria": "Evolves at level 15"
+    },
+    {
+      "id": "095",
+      "name": "Luxio",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "096",
+      "name": "Luxray",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "097",
+      "name": "Starly",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 14,
+      "evolution_criteria": "Evolves at level 14"
+    },
+    {
+      "id": "098",
+      "name": "Staravia",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "099",
+      "name": "Staraptor",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "100",
+      "name": "Oricorio",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "101",
+      "name": "Mareep",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 15,
+      "evolution_criteria": "Evolves at level 15"
+    },
+    {
+      "id": "102",
+      "name": "Flaaffy",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "103",
+      "name": "Ampharos",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "104",
+      "name": "Petilil",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Sun Stone to evolve"
+    },
+    {
+      "id": "105",
+      "name": "Lilligant",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "106",
+      "name": "Shroomish",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 23,
+      "evolution_criteria": "Evolves at level 23"
+    },
+    {
+      "id": "107",
+      "name": "Breloom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "108",
+      "name": "Applin",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Tart Apple to evolve"
+    },
+    {
+      "id": "109",
+      "name": "Flapple",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "110",
+      "name": "Appletun",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "111",
+      "name": "Spoink",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "112",
+      "name": "Grumpig",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "113",
+      "name": "Squawkabilly",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "114",
+      "name": "Misdreavus",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Dusk Stone to evolve"
+    },
+    {
+      "id": "115",
+      "name": "Mismagius",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "116",
+      "name": "Makuhita",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "117",
+      "name": "Hariyama",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "118",
+      "name": "Crabrawler",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use an Ice Stone to evolve"
+    },
+    {
+      "id": "119",
+      "name": "Crabominable",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "120",
+      "name": "Salandit",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "121",
+      "name": "Salazzle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "122",
+      "name": "Phanpy",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "123",
+      "name": "Donphan",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "124",
+      "name": "Cufant",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "125",
+      "name": "Copperajah",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "126",
+      "name": "Gible",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "127",
+      "name": "Gabite",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 48,
+      "evolution_criteria": "Evolves at level 48"
+    },
+    {
+      "id": "128",
+      "name": "Garchomp",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "129",
+      "name": "Nacli",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "130",
+      "name": "Naclstack",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "131",
+      "name": "Garganacl",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "132",
+      "name": "Wingull",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "133",
+      "name": "Pelipper",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "134",
+      "name": "Magikarp",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Evolves at level 20"
+    },
+    {
+      "id": "135",
+      "name": "Gyarados",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "136",
+      "name": "Arrokuda",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "137",
+      "name": "Barraskewda",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "138",
+      "name": "Basculin",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Take 294 recoil damage while knowing Wave Crash"
+    },
+    {
+      "id": "139",
+      "name": "Gulpin",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "140",
+      "name": "Swalot",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "141",
+      "name": "Meowth",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 28,
+      "evolution_criteria": "Evolves at level 28"
+    },
+    {
+      "id": "142",
+      "name": "Persian",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "143",
+      "name": "Drifloon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 28,
+      "evolution_criteria": "Evolves at level 28"
+    },
+    {
+      "id": "144",
+      "name": "Drifblim",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "145",
+      "name": "Flabébé",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 19,
+      "evolution_criteria": null
+    },
+    {
+      "id": "146",
+      "name": "Floette",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Shiny Stone to evolve"
+    },
+    {
+      "id": "147",
+      "name": "Florges",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "148",
+      "name": "Diglett",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "149",
+      "name": "Dugtrio",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "150",
+      "name": "Torkoal",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "151",
+      "name": "Numel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "152",
+      "name": "Camerupt",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "153",
+      "name": "Bronzor",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "154",
+      "name": "Bronzong",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "155",
+      "name": "Axew",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "156",
+      "name": "Fraxure",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 48,
+      "evolution_criteria": "Evolves at level 48"
+    },
+    {
+      "id": "157",
+      "name": "Haxorus",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "158",
+      "name": "Mankey",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 28,
+      "evolution_criteria": "Evolves at level 28"
+    },
+    {
+      "id": "159",
+      "name": "Primeape",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Rage Fist 20 times to evolve"
+    },
+    {
+      "id": "160",
+      "name": "Annihilape",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "161",
+      "name": "Meditite",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "162",
+      "name": "Medicham",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "163",
+      "name": "Riolu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up with high friendship during the day"
+    },
+    {
+      "id": "164",
+      "name": "Lucario",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "165",
+      "name": "Charcadet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use 10 Bronzor fragments to evolve"
+    },
+    {
+      "id": "166",
+      "name": "Armarouge",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "167",
+      "name": "Ceruledge",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "168",
+      "name": "Barboach",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "169",
+      "name": "Whiscash",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "170",
+      "name": "Tadbulb",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Thunder Stone to evolve"
+    },
+    {
+      "id": "171",
+      "name": "Bellibolt",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "172",
+      "name": "Goomy",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "173",
+      "name": "Sliggoo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 50,
+      "evolution_criteria": "Evolves at level 50"
+    },
+    {
+      "id": "174",
+      "name": "Goodra",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "175",
+      "name": "Croagunk",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "176",
+      "name": "Toxicroak",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "177",
+      "name": "Wattrel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "178",
+      "name": "Kilowattrel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "179",
+      "name": "Eevee",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Water Stone to evolve"
+    },
+    {
+      "id": "180",
+      "name": "Vaporeon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "181",
+      "name": "Jolteon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Thunder Stone"
+    },
+    {
+      "id": "182",
+      "name": "Flareon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Fire Stone"
+    },
+    {
+      "id": "183",
+      "name": "Espeon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Lv Up with Max Friendship during the Day"
+    },
+    {
+      "id": "184",
+      "name": "Umbreon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Lv Up with Max Friendship During Night"
+    },
+    {
+      "id": "185",
+      "name": "Leafeon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Leaf Stone"
+    },
+    {
+      "id": "186",
+      "name": "Glaceon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Ice Stone"
+    },
+    {
+      "id": "187",
+      "name": "Sylveon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Lv Up with Max Friendship and a Fairy Move"
+    },
+    {
+      "id": "188",
+      "name": "Dunsparce",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up after learning the move Hyper Drill"
+    },
+    {
+      "id": "189",
+      "name": "Dudunsparce",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "190",
+      "name": "Deerling",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "191",
+      "name": "Sawsbuck",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "192",
+      "name": "Girafarig",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up while knowing the move Twin Beam"
+    },
+    {
+      "id": "193",
+      "name": "Farigiraf",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "194",
+      "name": "Grimer",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "195",
+      "name": "Muk",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "196",
+      "name": "Maschiff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "197",
+      "name": "Mabosstiff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "198",
+      "name": "Toxel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "199",
+      "name": "Toxtricity",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "200",
+      "name": "Dedenne",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "201",
+      "name": "Pachirisu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "202",
+      "name": "Shroodle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 28,
+      "evolution_criteria": "Evolves at level 28"
+    },
+    {
+      "id": "203",
+      "name": "Grafaiai",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "204",
+      "name": "Stantler",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Psyshield Bash 20 times in Agile Style"
+    },
+    {
+      "id": "205",
+      "name": "Foongus",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 39,
+      "evolution_criteria": "Evolves at level 39"
+    },
+    {
+      "id": "206",
+      "name": "Amoonguss",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "207",
+      "name": "Voltorb",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "208",
+      "name": "Electrode",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "209",
+      "name": "Magnemite",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "210",
+      "name": "Magneton",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Thunder Stone"
+    },
+    {
+      "id": "211",
+      "name": "Magnezone",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "212",
+      "name": "Ditto",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "213",
+      "name": "Growlithe",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "use Fire Stone"
+    },
+    {
+      "id": "214",
+      "name": "Arcanine",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "215",
+      "name": "Teddiursa",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "216",
+      "name": "Ursaring",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Peat Block in Crimson Mirelands during a full moon"
+    },
+    {
+      "id": "217",
+      "name": "Zangoose",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "218",
+      "name": "Seviper",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "219",
+      "name": "Swablu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "220",
+      "name": "Altaria",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "221",
+      "name": "Skiddo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "222",
+      "name": "Gogoat",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "223",
+      "name": "Tauros",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "224",
+      "name": "Litleo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "225",
+      "name": "Pyroar",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "226",
+      "name": "Stunky",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "227",
+      "name": "Skuntank",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "228",
+      "name": "Zorua",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "229",
+      "name": "Zoroark",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "230",
+      "name": "Sneasel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Razor Claw during Night-time"
+    },
+    {
+      "id": "231",
+      "name": "Weavile",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "232",
+      "name": "Murkrow",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "use Dusk Stone"
+    },
+    {
+      "id": "233",
+      "name": "Honchkrow",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "234",
+      "name": "Gothita",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "235",
+      "name": "Gothorita",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 41,
+      "evolution_criteria": "Evolves at level 41"
+    },
+    {
+      "id": "236",
+      "name": "Gothitelle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "237",
+      "name": "Sinistea",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Cracked Pot to evolve"
+    },
+    {
+      "id": "238",
+      "name": "Polteageist",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "239",
+      "name": "Mimikyu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "240",
+      "name": "Klefki",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "241",
+      "name": "Indeedee",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "242",
+      "name": "Bramblin",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Walk 1000 steps in Let's Go mode, then level up"
+    },
+    {
+      "id": "243",
+      "name": "Brambleghast",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "244",
+      "name": "Toedscool",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "245",
+      "name": "Toedscruel",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "246",
+      "name": "Tropius",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "247",
+      "name": "Fomantis",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "248",
+      "name": "Lurantis",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "249",
+      "name": "Klawf",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "250",
+      "name": "Capsakid",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use a Fire Stone to evolve"
+    },
+    {
+      "id": "251",
+      "name": "Scovillain",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "252",
+      "name": "Cacnea",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "253",
+      "name": "Cacturne",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "254",
+      "name": "Rellor",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Walk 1000 steps in Let's Go mode in the Marsh Biome, then level up"
+    },
+    {
+      "id": "255",
+      "name": "Rabsca",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "256",
+      "name": "Venonat",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 31,
+      "evolution_criteria": "Evolves at level 31"
+    },
+    {
+      "id": "257",
+      "name": "Venomoth",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "258",
+      "name": "Pineco",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 31,
+      "evolution_criteria": "Evolves at level 31"
+    },
+    {
+      "id": "259",
+      "name": "Forretress",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "260",
+      "name": "Scyther",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Trade while holding a Metal Coat to evolve"
+    },
+    {
+      "id": "261",
+      "name": "Scizor",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "262",
+      "name": "Heracross",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "263",
+      "name": "Flittle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "264",
+      "name": "Espathra",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "265",
+      "name": "Hippopotas",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "266",
+      "name": "Hippowdon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "267",
+      "name": "Sandile",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 29,
+      "evolution_criteria": "Evolves at level 29"
+    },
+    {
+      "id": "268",
+      "name": "Krokorok",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "269",
+      "name": "Krookodile",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "270",
+      "name": "Silicobra",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "271",
+      "name": "Sandaconda",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "272",
+      "name": "Mudbray",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "273",
+      "name": "Mudsdale",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "274",
+      "name": "Larvesta",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 59,
+      "evolution_criteria": "Evolves at level 59"
+    },
+    {
+      "id": "275",
+      "name": "Volcarona",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "276",
+      "name": "Bagon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "277",
+      "name": "Shelgon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 50,
+      "evolution_criteria": "Evolves at level 50"
+    },
+    {
+      "id": "278",
+      "name": "Salamence",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "279",
+      "name": "Tinkatink",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "280",
+      "name": "Tinkatuff",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "281",
+      "name": "Tinkaton",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "282",
+      "name": "Hatenna",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "283",
+      "name": "Hattrem",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 42,
+      "evolution_criteria": "Evolves at level 42"
+    },
+    {
+      "id": "284",
+      "name": "Hatterene",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "285",
+      "name": "Impidimp",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "286",
+      "name": "Morgrem",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 42,
+      "evolution_criteria": "Evolves at level 42"
+    },
+    {
+      "id": "287",
+      "name": "Grimmsnarl",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "288",
+      "name": "Wiglett",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "289",
+      "name": "Wugtrio",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "290",
+      "name": "Bombirdier",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "291",
+      "name": "Finizen",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up to 38 or higher while playing in co-op mode"
+    },
+    {
+      "id": "292",
+      "name": "Palafin",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Switch during battle to change form"
+    },
+    {
+      "id": "293",
+      "name": "Varoom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "294",
+      "name": "Revavroom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "295",
+      "name": "Cyclizar",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "296",
+      "name": "Orthworm",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "297",
+      "name": "Sableye",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "298",
+      "name": "Shuppet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "299",
+      "name": "Banette",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "300",
+      "name": "Falinks",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "301",
+      "name": "Hawlucha",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "302",
+      "name": "Spiritomb",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "303",
+      "name": "Noibat",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 48,
+      "evolution_criteria": "Evolves at level 48"
+    },
+    {
+      "id": "304",
+      "name": "Noivern",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "305",
+      "name": "Dreepy",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 50,
+      "evolution_criteria": "Evolves at level 50"
+    },
+    {
+      "id": "306",
+      "name": "Drakloak",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 60,
+      "evolution_criteria": "Evolves at level 60"
+    },
+    {
+      "id": "307",
+      "name": "Dragapult",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "308",
+      "name": "Glimmet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": "Evolves at level 35"
+    },
+    {
+      "id": "309",
+      "name": "Glimmora",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "310",
+      "name": "Rotom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Rotom Catalog"
+    },
+    {
+      "id": "311",
+      "name": "Greavard",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "312",
+      "name": "Houndstone",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "313",
+      "name": "Oranguru",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "314",
+      "name": "Passimian",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "315",
+      "name": "Komala",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "316",
+      "name": "Larvitar",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "317",
+      "name": "Pupitar",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 55,
+      "evolution_criteria": "Evolves at level 55"
+    },
+    {
+      "id": "318",
+      "name": "Tyranitar",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "319",
+      "name": "Stonjourner",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "320",
+      "name": "Eiscue",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "321",
+      "name": "Pincurchin",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "322",
+      "name": "Sandygast",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 42,
+      "evolution_criteria": "Evolves at level 42"
+    },
+    {
+      "id": "323",
+      "name": "Palossand",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "324",
+      "name": "Slowpoke",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "325",
+      "name": "Slowbro",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "326",
+      "name": "Slowking",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "(trade holding King's Rock)"
+    },
+    {
+      "id": "327",
+      "name": "Shellos",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "328",
+      "name": "Gastrodon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "329",
+      "name": "Shellder",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "use Water Stone"
+    },
+    {
+      "id": "330",
+      "name": "Cloyster",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "331",
+      "name": "Qwilfish",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "332",
+      "name": "Luvdisc",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "333",
+      "name": "Finneon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 31,
+      "evolution_criteria": "Evolves at level 31"
+    },
+    {
+      "id": "334",
+      "name": "Lumineon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "335",
+      "name": "Bruxish",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "336",
+      "name": "Alomomola",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "337",
+      "name": "Skrelp",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 48,
+      "evolution_criteria": "Evolves at level 48"
+    },
+    {
+      "id": "338",
+      "name": "Dragalge",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "339",
+      "name": "Clauncher",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "340",
+      "name": "Clawitzer",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "341",
+      "name": "Tynamo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 39,
+      "evolution_criteria": "Evolves at level 39"
+    },
+    {
+      "id": "342",
+      "name": "Eelektrik",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "use Thunder Stone"
+    },
+    {
+      "id": "343",
+      "name": "Eelektross",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "344",
+      "name": "Mareanie",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "345",
+      "name": "Toxapex",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "346",
+      "name": "Flamigo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "347",
+      "name": "Dratini",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "348",
+      "name": "Dragonair",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 55,
+      "evolution_criteria": "Evolves at level 55"
+    },
+    {
+      "id": "349",
+      "name": "Dragonite",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "350",
+      "name": "Snom",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "high Friendship, Nighttime"
+    },
+    {
+      "id": "351",
+      "name": "Frosmoth",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "352",
+      "name": "Snover",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "353",
+      "name": "Abomasnow",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "354",
+      "name": "Delibird",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "355",
+      "name": "Cubchoo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "356",
+      "name": "Beartic",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "357",
+      "name": "Snorunt",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 42,
+      "evolution_criteria": "Evolves at level 42"
+    },
+    {
+      "id": "358",
+      "name": "Glalie",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "359",
+      "name": "Froslass",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "On Female Pokemon, use Dawn Stone"
+    },
+    {
+      "id": "360",
+      "name": "Cryogonal",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "361",
+      "name": "Cetoddle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Ice Stone"
+    },
+    {
+      "id": "362",
+      "name": "Cetitan",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "363",
+      "name": "Bergmite",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "364",
+      "name": "Avalugg",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "365",
+      "name": "Rufflet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 54,
+      "evolution_criteria": "Evolves at level 54"
+    },
+    {
+      "id": "366",
+      "name": "Braviary",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "367",
+      "name": "Pawniard",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 52,
+      "evolution_criteria": "Evolves at level 52"
+    },
+    {
+      "id": "368",
+      "name": "Bisharp",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": "Defeat 3 Bisharp that are holding Leader's Crest"
+    },
+    {
+      "id": "369",
+      "name": "Kingambit",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "370",
+      "name": "Deino",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 50,
+      "evolution_criteria": "Evolves at level 50"
+    },
+    {
+      "id": "371",
+      "name": "Zweilous",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 64,
+      "evolution_criteria": "Evolves at level 64"
+    },
+    {
+      "id": "372",
+      "name": "Hydreigon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "373",
+      "name": "Veluza",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "374",
+      "name": "Dondozo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "375",
+      "name": "Tatsugiri",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "376",
+      "name": "Great Tusk",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "377",
+      "name": "Scream Tail",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "378",
+      "name": "Brute Bonnet",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "379",
+      "name": "Flutter Mane",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "380",
+      "name": "Slither Wing",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "381",
+      "name": "Sandy Shocks",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "382",
+      "name": "Iron Treads",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "383",
+      "name": "Iron Bundle",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "384",
+      "name": "Iron Hands",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "385",
+      "name": "Iron Jugulis",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "386",
+      "name": "Iron Moth",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "387",
+      "name": "Iron Thorns",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "388",
+      "name": "Frigibax",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 35,
+      "evolution_criteria": null
+    },
+    {
+      "id": "389",
+      "name": "Arctibax",
+      "seen": false,
+      "captured": false,
+      "evolution_level": 54,
+      "evolution_criteria": null
+    },
+    {
+      "id": "390",
+      "name": "Baxcalibur",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "391",
+      "name": "Gimmighoul",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "392",
+      "name": "Gholdengo",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "393",
+      "name": "Wo-Chien",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "394",
+      "name": "Chien-Pao",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "395",
+      "name": "Ting-Lu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "396",
+      "name": "Chi-Yu",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "397",
+      "name": "Roaring Moon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "398",
+      "name": "Iron Valiant",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "399",
+      "name": "Koraidon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "400",
+      "name": "Miraidon",
+      "seen": false,
+      "captured": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    }
+  ]
+}
