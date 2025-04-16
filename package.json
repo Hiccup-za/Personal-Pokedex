@@ -1,0 +1,12 @@
+{
+  "name": "personal-pokedex",
+  "version": "1.0.0",
+  "description": "A personal pokedex tracker",
+  "main": "index.html",
+  "scripts": {
+    "dev": "bun --hot index.html"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+} 
