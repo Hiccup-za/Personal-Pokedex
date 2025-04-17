@@ -531,111 +531,105 @@
         let activeMenuGameType = null;
         let currentAction = null;
 
-        // Try to load saved games from localStorage
+        // Function to generate a unique ID
+        function generateUniqueId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+
+        // Function to load games from localStorage
         function loadGames() {
             try {
                 const savedGames = localStorage.getItem('userGames');
                 if (savedGames) {
                     userGames = JSON.parse(savedGames);
+                    renderContent();
+                } else {
+                    // First time initialization
+                    initializeGames();
                 }
             } catch (error) {
-                console.error('Error loading games:', error);
-                userGames = [];
+                // Handle error silently
+                initializeGames();
             }
-            renderContent();
         }
 
-        // Save games to localStorage
+        // Function to save games to localStorage
         function saveGames() {
             try {
                 localStorage.setItem('userGames', JSON.stringify(userGames));
             } catch (error) {
-                console.error('Error saving games:', error);
+                // Handle error silently
             }
         }
 
-        // Add a new game
-        function addGame(gameType) {
-            // Check if game already exists
-            if (!userGames.find(game => game.type === gameType)) {
-                const newGame = {
-                    type: gameType,
-                    name: gameType === 'scarlet' ? 'Pokémon Scarlet' : 'Pokémon Violet',
-                    addedAt: new Date().toISOString(),
+        // Function to initialize games for first time
+        function initializeGames() {
+            // Create default games
+            userGames = [
+                {
+                    id: generateUniqueId(),
+                    name: 'Scarlet',
+                    type: 'scarlet',
+                    dateAdded: new Date().toISOString(),
+                    icon: './images/scarlet-icon.webp',
                     stats: {
                         seen: 0,
                         captured: 0,
                         shiny: 0,
                         total: 0
                     }
-                };
-                
-                userGames.push(newGame);
-                saveGames();
-                
-                // Initialize game stats by loading the Pokémon data if available
-                if (gameType === 'violet') {
-                    initializeGameStats('violet', './data/scarlet-violet.json');
-                } else if (gameType === 'scarlet') {
-                    initializeGameStats('scarlet', './data/scarlet-violet.json');
+                },
+                {
+                    id: generateUniqueId(),
+                    name: 'Violet',
+                    type: 'violet',
+                    dateAdded: new Date().toISOString(),
+                    icon: './images/violet-icon.webp',
+                    stats: {
+                        seen: 0,
+                        captured: 0,
+                        shiny: 0,
+                        total: 0
+                    }
+                }
+            ];
+            
+            saveGames();
+            renderContent();
+        }
+
+        // Function to initialize stats for each game
+        function initializeStats(gameType) {
+            try {
+                let storageKey;
+                if (gameType === 'scarlet') {
+                    storageKey = 'scarletPokemonData';
+                } else if (gameType === 'violet') {
+                    storageKey = 'pokemonData';
+                } else {
+                    return null;
                 }
                 
-                renderContent();
-            }
-            
-            closeModal();
-        }
-        
-        // Initialize game stats from saved Pokémon data or JSON file
-        async function initializeGameStats(gameType, jsonPath) {
-            try {
-                // First check if we already have saved data
-                const localStorageKey = gameType === 'scarlet' ? 'scarletPokemonData' : 'pokemonData';
-                const savedData = localStorage.getItem(localStorageKey);
+                const savedData = localStorage.getItem(storageKey);
                 if (savedData) {
                     const pokemonData = JSON.parse(savedData);
-                    updateGameStatsFromPokemonData(gameType, pokemonData);
-                    return;
-                }
-                
-                // If no saved data, load from JSON file
-                const response = await fetch(jsonPath);
-                const data = await response.json();
-                if (data && data.pokemon && data.pokemon.length > 0) {
-                    updateGameStatsFromPokemonData(gameType, data.pokemon);
+                    const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+                    const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+                    const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+                    const totalCount = pokemonData.length;
                     
-                    // Initialize empty data in localStorage
-                    const emptyData = data.pokemon.map(pokemon => ({
-                        ...pokemon,
-                        seen: false,
-                        captured: false,
-                        shiny: false
-                    }));
-                    localStorage.setItem(localStorageKey, JSON.stringify(emptyData));
+                    return {
+                        seen: seenCount,
+                        captured: capturedCount,
+                        shiny: shinyCount,
+                        total: totalCount
+                    };
                 }
+                
+                return null;
             } catch (error) {
-                console.error(`Error initializing stats for ${gameType}:`, error);
-            }
-        }
-        
-        // Update game stats based on Pokémon data
-        function updateGameStatsFromPokemonData(gameType, pokemonData) {
-            const gameIndex = userGames.findIndex(game => game.type === gameType);
-            if (gameIndex !== -1) {
-                const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
-                const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
-                const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
-                const totalCount = pokemonData.length;
-                
-                userGames[gameIndex].stats = {
-                    seen: seenCount,
-                    captured: capturedCount,
-                    shiny: shinyCount,
-                    total: totalCount
-                };
-                
-                saveGames();
-                renderContent();
+                // Handle error silently
+                return null;
             }
         }
 

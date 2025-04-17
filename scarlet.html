@@ -805,10 +805,8 @@
 
         async function loadPokemonData() {
             try {
-                console.log('Starting to load Pokémon data in Scarlet');
                 // Try to load saved data from localStorage first
                 const savedData = localStorage.getItem('scarletPokemonData');
-                console.log('Data from localStorage:', savedData ? 'Found data' : 'No data found');
                 if (savedData) {
                     pokemonData = JSON.parse(savedData);
                     
@@ -824,33 +822,21 @@
                 }
 
                 // If no saved data, load from JSON file
-                console.log('Fetching data from scarlet-violet.json');
-                
                 // First try to check if the file exists with a HEAD request
                 try {
                     const checkResponse = await fetch('./data/scarlet-violet.json', { method: 'HEAD' });
-                    console.log('JSON file exists:', checkResponse.ok, 'Status:', checkResponse.status);
                     if (!checkResponse.ok) {
-                        console.error('File not found or inaccessible');
                         return;
                     }
                 } catch (fileError) {
-                    console.error('Error checking file:', fileError);
                     return;
                 }
                 
                 const response = await fetch('./data/scarlet-violet.json');
                 if (!response.ok) {
-                    console.error(`Error fetching JSON: ${response.status} ${response.statusText}`);
                     return;
                 }
                 const data = await response.json();
-                console.log('JSON data loaded:', data ? 'Success' : 'Failed');
-                console.log('Pokemon count:', data.pokemon ? data.pokemon.length : 0);
-                // Log the first few Pokémon to see their structure
-                if (data.pokemon && data.pokemon.length > 0) {
-                    console.log('First few Pokémon:', JSON.stringify(data.pokemon.slice(0, 3)));
-                }
                 pokemonData = data.pokemon;
                 
                 // Initialize shiny property if it doesn't exist
@@ -862,7 +848,6 @@
                 
                 // Check if the Pokemon data is valid
                 if (!pokemonData || pokemonData.length === 0) {
-                    console.warn('No Pokémon data found in the JSON file.');
                     return; // Exit early when no data is available
                 }
                 
@@ -871,8 +856,6 @@
                 // Save the data
                 savePokemonData();
             } catch (error) {
-                console.error('Error loading Pokémon data:', error);
-                console.error('Error details:', error.message, error.stack);
                 // Don't create sample data as fallback, just return
                 return;
             }
@@ -880,24 +863,19 @@
 
         function savePokemonData() {
             try {
-                console.log('Saving Pokemon data to localStorage');
                 // Check exclusive parameters before saving
                 const scarletCount = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet").length;
                 const violetCount = pokemonData.filter(pokemon => pokemon.exclusive === "violet").length;
-                console.log(`Saving data with ${scarletCount} Scarlet exclusives and ${violetCount} Violet exclusives`);
-                console.log(`Total Pokemon count: ${pokemonData.length}`);
                 
                 localStorage.setItem('scarletPokemonData', JSON.stringify(pokemonData));
-                console.log('Data saved to localStorage with key: scarletPokemonData');
                 // Update game stats for the home page
                 updateGameStats();
             } catch (error) {
-                console.error('Error saving Pokémon data:', error);
-                console.error('Error details:', error.message, error.stack);
+                // Handle errors silently
             }
         }
 
-        // New function to update the game stats in the home page data
+        // Function to update the game stats in the home page data
         function updateGameStats() {
             try {
                 // Get user games from localStorage
@@ -927,17 +905,11 @@
                     }
                 }
             } catch (error) {
-                console.error('Error updating game stats:', error);
+                // Handle errors silently
             }
         }
 
         function displayPokemon(pokemonList) {
-            console.log(`Displaying ${pokemonList.length} Pokemon`);
-            // Log the first few items to inspect what's being displayed
-            if (pokemonList.length > 0) {
-                console.log('First few Pokemon to display:', JSON.stringify(pokemonList.slice(0, 3)));
-            }
-            
             const grid = document.getElementById('pokemonGrid');
             grid.innerHTML = '';
 
@@ -947,14 +919,11 @@
             const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
             const totalCount = pokemonData.length;
             
-            console.log(`Stats - Seen: ${seenCount}, Captured: ${capturedCount}, Shiny: ${shinyCount}, Total: ${totalCount}`);
-            
             document.getElementById('seenCount').textContent = seenCount;
             document.getElementById('capturedCount').textContent = `${capturedCount} / ${totalCount}`;
             document.getElementById('shinyCount').textContent = shinyCount;
 
             if (pokemonList.length === 0) {
-                console.log('No Pokemon to display, showing no results message');
                 const noResults = document.createElement('div');
                 noResults.className = 'no-results';
                 noResults.textContent = 'No Pokémon found matching your search.';
@@ -962,15 +931,11 @@
                 return;
             }
 
-            // Debug - Log exclusives count
+            // Get exclusives count
             const scarletCount = pokemonList.filter(pokemon => pokemon.exclusive === "scarlet").length;
             const violetCount = pokemonList.filter(pokemon => pokemon.exclusive === "violet").length;
-            console.log(`Found ${scarletCount} Scarlet exclusives and ${violetCount} Violet exclusives`);
 
             pokemonList.forEach(pokemon => {
-                // Log each Pokemon's data for debugging
-                console.log(`Creating card for Pokemon: ${JSON.stringify(pokemon)}`);
-                
                 const card = document.createElement('div');
                 card.className = 'pokemon-card';
                 
@@ -1060,7 +1025,7 @@
                         badge.addEventListener('click', (e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            const id = parseInt(badge.dataset.id);
+                            const id = badge.dataset.id;
                             const status = badge.dataset.status;
                             togglePokemonStatus(id, status);
                         });
@@ -1073,7 +1038,7 @@
                             e.preventDefault();
                             e.stopPropagation();
                             const badge = icon.closest('.badge');
-                            const id = parseInt(badge.dataset.id);
+                            const id = badge.dataset.id;
                             const status = badge.dataset.status;
                             togglePokemonStatus(id, status);
                         });
@@ -1088,7 +1053,7 @@
             // Find pokemon by string ID comparison
             const pokemon = pokemonData.find(p => String(p.id) === String(id));
             if (!pokemon) {
-                console.error('Pokemon not found:', id);
+                console.log("Pokemon not found with ID:", id);
                 return;
             }
 
@@ -1143,7 +1108,6 @@
             // Special case for searching exclusive Pokémon
             if (searchTerm === 'exclusive') {
                 const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet");
-                console.log(`Found ${filtered.length} Scarlet exclusives for 'exclusive' search`);
                 displayPokemon(filtered);
                 return;
             }
@@ -1151,7 +1115,6 @@
             // Special case for searching locked Pokémon (Violet exclusives)
             if (searchTerm === 'locked') {
                 const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "violet");
-                console.log(`Found ${filtered.length} Violet exclusives for 'locked' search`);
                 displayPokemon(filtered);
                 return;
             }
@@ -1180,10 +1143,6 @@
 
         // Load the data when the page loads
         document.addEventListener('DOMContentLoaded', () => {
-            // Add a debug option to clear localStorage
-            console.log('Clearing localStorage for debug purposes');
-            localStorage.removeItem('scarletPokemonData');
-            
             loadPokemonData();
             
             // Add a back button to navigate to the home page

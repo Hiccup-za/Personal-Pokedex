@@ -829,7 +829,6 @@
                 
                 // Check if the Pokemon data is valid
                 if (!pokemonData || pokemonData.length === 0) {
-                    console.warn('No Pokémon data found in the JSON file.');
                     return; // Exit early when no data is available
                 }
                 
@@ -838,7 +837,6 @@
                 // Save the data
                 savePokemonData();
             } catch (error) {
-                console.error('Error loading Pokémon data:', error);
                 // Exit early on error
                 return;
             }
@@ -849,17 +847,16 @@
                 // Check exclusive parameters before saving
                 const scarletCount = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet").length;
                 const violetCount = pokemonData.filter(pokemon => pokemon.exclusive === "violet").length;
-                console.log(`Saving data with ${scarletCount} Scarlet exclusives and ${violetCount} Violet exclusives`);
                 
                 localStorage.setItem('pokemonData', JSON.stringify(pokemonData));
                 // Update game stats for the home page
                 updateGameStats();
             } catch (error) {
-                console.error('Error saving Pokémon data:', error);
+                // Handle errors silently
             }
         }
 
-        // New function to update the game stats in the home page data
+        // Function to update the game stats in the home page data
         function updateGameStats() {
             try {
                 // Get user games from localStorage
@@ -889,7 +886,7 @@
                     }
                 }
             } catch (error) {
-                console.error('Error updating game stats:', error);
+                // Handle errors silently
             }
         }
 
@@ -915,10 +912,9 @@
                 return;
             }
 
-            // Debug - Log exclusives count
+            // Get exclusives count
             const scarletCount = pokemonList.filter(pokemon => pokemon.exclusive === "scarlet").length;
             const violetCount = pokemonList.filter(pokemon => pokemon.exclusive === "violet").length;
-            console.log(`Found ${scarletCount} Scarlet exclusives and ${violetCount} Violet exclusives`);
 
             pokemonList.forEach(pokemon => {
                 const card = document.createElement('div');
@@ -1002,7 +998,7 @@
                         badge.addEventListener('click', (e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            const id = parseInt(badge.dataset.id);
+                            const id = badge.dataset.id;
                             const status = badge.dataset.status;
                             togglePokemonStatus(id, status);
                         });
@@ -1015,7 +1011,7 @@
                             e.preventDefault();
                             e.stopPropagation();
                             const badge = icon.closest('.badge');
-                            const id = parseInt(badge.dataset.id);
+                            const id = badge.dataset.id;
                             const status = badge.dataset.status;
                             togglePokemonStatus(id, status);
                         });
@@ -1030,7 +1026,7 @@
             // Find pokemon by string ID comparison
             const pokemon = pokemonData.find(p => String(p.id) === String(id));
             if (!pokemon) {
-                console.error('Pokemon not found:', id);
+                console.log("Pokemon not found with ID:", id);
                 return;
             }
 
@@ -1085,7 +1081,6 @@
             // Special case for searching exclusive Pokémon
             if (searchTerm === 'exclusive') {
                 const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet");
-                console.log(`Found ${filtered.length} Scarlet exclusives for 'exclusive' search`);
                 displayPokemon(filtered);
                 return;
             }
@@ -1093,7 +1088,6 @@
             // Special case for searching locked Pokémon (Violet exclusives)
             if (searchTerm === 'locked') {
                 const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "violet");
-                console.log(`Found ${filtered.length} Violet exclusives for 'locked' search`);
                 displayPokemon(filtered);
                 return;
             }
