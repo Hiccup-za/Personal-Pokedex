@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Pokedex - Violet</title>
+    <meta name="theme-color" content="#000000">
     <style>
         :root {
             --primary-color: #ffffff;
@@ -768,7 +769,6 @@
 <body>
     <div class="container">
         <header>
-            <!-- <h1>Pokedex</h1> -->
             <h1>Pokémon Violet</h1>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search by name, number, shiny, or exclusive...">
@@ -1080,14 +1080,14 @@
             
             // Special case for searching exclusive Pokémon
             if (searchTerm === 'exclusive') {
-                const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet");
+                const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "violet");
                 displayPokemon(filtered);
                 return;
             }
             
-            // Special case for searching locked Pokémon (Violet exclusives)
+            // Special case for searching locked Pokémon (Scarlet exclusives)
             if (searchTerm === 'locked') {
-                const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "violet");
+                const filtered = pokemonData.filter(pokemon => pokemon.exclusive === "scarlet");
                 displayPokemon(filtered);
                 return;
             }
