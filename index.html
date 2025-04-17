@@ -1005,6 +1005,53 @@
             }
         }
 
+        // Add a new game
+        function addGame(gameType) {
+            // Check if game already exists
+            const gameExists = userGames.some(game => game.type === gameType);
+            if (gameExists) {
+                return; // Don't add duplicate games
+            }
+
+            let gameName, iconPath;
+            if (gameType === 'violet') {
+                gameName = 'Violet';
+                iconPath = './images/violet-icon.webp';
+            } else if (gameType === 'scarlet') {
+                gameName = 'Scarlet';
+                iconPath = './images/scarlet-icon.webp';
+            } else {
+                return; // Invalid game type
+            }
+
+            // Create the new game object
+            const newGame = {
+                id: generateUniqueId(),
+                name: gameName,
+                type: gameType,
+                dateAdded: new Date().toISOString(),
+                icon: iconPath,
+                stats: {
+                    seen: 0,
+                    captured: 0,
+                    shiny: 0,
+                    total: 0
+                }
+            };
+
+            // Get initial stats if available
+            const initialStats = initializeStats(gameType);
+            if (initialStats) {
+                newGame.stats = initialStats;
+            }
+
+            // Add to user games array
+            userGames.push(newGame);
+            saveGames();
+            closeModal();
+            renderContent();
+        }
+
         // Open the add game modal
         function openModal() {
             const modal = document.getElementById('addGameModal');
