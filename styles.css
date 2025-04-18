@@ -172,6 +172,13 @@ h1 {
     border-color: rgba(82, 82, 91, 0.6);
 }
 
+/* Special hover effect for Legends Arceus game stats */
+.game-container[data-game="legends-arceus"]:hover .game-stats {
+    background-color: rgba(39, 39, 42, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
 .empty-state {
     display: flex;
     flex-direction: column;
@@ -362,6 +369,10 @@ h1 {
 
 .game-option[data-game="violet"]:hover {
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
+
+.game-option[data-game="legends-arceus"]:hover {
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
 
 .game-book-icon {
@@ -693,11 +704,33 @@ h1 {
 }
 
 .game-card[data-game="scarlet"] {
-    background-image: url('assets/scarlet-large.jpg');
+    background-image: url('./assets/Scarlet-BoxArt.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .game-card[data-game="violet"] {
-    background-image: url('assets/violet-large.jpg');
+    background-image: url('./assets/Violet-BoxArt.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.game-card[data-game="legends-arceus"] {
+    background-image: url('./assets/Arceus_BoxArt.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-color: rgba(82, 82, 91, 0.5);
+}
+
+.game-card[data-game="legends-arceus"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.6);
 }
 
 .stat-item {

@@ -1,0 +1,2404 @@
+{
+  "pokemon": [
+    {
+      "id": "001",
+      "name": "Rowlet",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 17,
+      "evolution_criteria": "Evolves at level 17"
+    },
+    {
+      "id": "002",
+      "name": "Dartrix",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "003",
+      "name": "Hisuian Decidueye",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "004",
+      "name": "Cyndaquil",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 14,
+      "evolution_criteria": "Evolves at level 14"
+    },
+    {
+      "id": "005",
+      "name": "Quilava",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "006",
+      "name": "Hisuian Typhlosion",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "007",
+      "name": "Oshawott",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 17,
+      "evolution_criteria": "Evolves at level 17"
+    },
+    {
+      "id": "008",
+      "name": "Dewott",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "009",
+      "name": "Hisuian Samurott",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "010",
+      "name": "Bidoof",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 15,
+      "evolution_criteria": "Evolves at level 15"
+    },
+    {
+      "id": "011",
+      "name": "Bibarel",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "012",
+      "name": "Starly",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 14,
+      "evolution_criteria": "Evolves at level 14"
+    },
+    {
+      "id": "013",
+      "name": "Staravia",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "014",
+      "name": "Staraptor",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "015",
+      "name": "Shinx",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 15,
+      "evolution_criteria": "Evolves at level 15"
+    },
+    {
+      "id": "016",
+      "name": "Luxio",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "017",
+      "name": "Luxray",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "018",
+      "name": "Wurmple",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 7,
+      "evolution_criteria": "Evolves at level 7 (random evolution)"
+    },
+    {
+      "id": "019",
+      "name": "Silcoon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 10,
+      "evolution_criteria": "Evolves at level 10"
+    },
+    {
+      "id": "020",
+      "name": "Beautifly",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "021",
+      "name": "Cascoon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 10,
+      "evolution_criteria": "Evolves at level 10"
+    },
+    {
+      "id": "022",
+      "name": "Dustox",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "023",
+      "name": "Ponyta",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "024",
+      "name": "Rapidash",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "025",
+      "name": "Eevee",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Multiple evolution methods"
+    },
+    {
+      "id": "026",
+      "name": "Vaporeon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Water Stone on Eevee"
+    },
+    {
+      "id": "027",
+      "name": "Jolteon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Thunder Stone on Eevee"
+    },
+    {
+      "id": "028",
+      "name": "Flareon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Fire Stone on Eevee"
+    },
+    {
+      "id": "029",
+      "name": "Espeon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up Eevee with high friendship during daytime"
+    },
+    {
+      "id": "030",
+      "name": "Umbreon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up Eevee with high friendship at night"
+    },
+    {
+      "id": "031",
+      "name": "Leafeon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Leaf Stone on Eevee or level up near Mossy Rock"
+    },
+    {
+      "id": "032",
+      "name": "Glaceon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Ice Stone on Eevee or level up near Icy Rock"
+    },
+    {
+      "id": "033",
+      "name": "Sylveon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Level up Eevee with high friendship and knowing a Fairy-type move"
+    },
+    {
+      "id": "034",
+      "name": "Zubat",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 22,
+      "evolution_criteria": "Evolves at level 22"
+    },
+    {
+      "id": "035",
+      "name": "Golbat",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "036",
+      "name": "Crobat",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "037",
+      "name": "Drifloon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 28,
+      "evolution_criteria": "Evolves at level 28"
+    },
+    {
+      "id": "038",
+      "name": "Drifblim",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "039",
+      "name": "Kricketot",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 10,
+      "evolution_criteria": "Evolves at level 10"
+    },
+    {
+      "id": "040",
+      "name": "Kricketune",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "041",
+      "name": "Buizel",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 26,
+      "evolution_criteria": "Evolves at level 26"
+    },
+    {
+      "id": "042",
+      "name": "Floatzel",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "043",
+      "name": "Burmy",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Female evolves into Wormadam at level 20, male evolves into Mothim at level 20"
+    },
+    {
+      "id": "044",
+      "name": "Wormadam",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "045",
+      "name": "Mothim",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "046",
+      "name": "Geodude",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "047",
+      "name": "Graveler",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves when traded or with a Linking Cord"
+    },
+    {
+      "id": "048",
+      "name": "Golem",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "049",
+      "name": "Stantler",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Psyshield Bash in Agile Style 20 times"
+    },
+    {
+      "id": "050",
+      "name": "Wyrdeer",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "051",
+      "name": "Munchlax",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "052",
+      "name": "Snorlax",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "053",
+      "name": "Paras",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "054",
+      "name": "Parasect",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "055",
+      "name": "Pichu",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "056",
+      "name": "Pikachu",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Thunder Stone"
+    },
+    {
+      "id": "057",
+      "name": "Raichu",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "058",
+      "name": "Abra",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 16,
+      "evolution_criteria": "Evolves at level 16"
+    },
+    {
+      "id": "059",
+      "name": "Kadabra",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves when traded or with a Linking Cord"
+    },
+    {
+      "id": "060",
+      "name": "Alakazam",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "061",
+      "name": "Chimchar",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 14,
+      "evolution_criteria": "Evolves at level 14"
+    },
+    {
+      "id": "062",
+      "name": "Monferno",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "063",
+      "name": "Infernape",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "064",
+      "name": "Buneary",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "065",
+      "name": "Lopunny",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "066",
+      "name": "Cherubi",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "067",
+      "name": "Cherrim",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "068",
+      "name": "Psyduck",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "069",
+      "name": "Golduck",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "070",
+      "name": "Combee",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 21,
+      "evolution_criteria": "Female evolves at level 21, males cannot evolve"
+    },
+    {
+      "id": "071",
+      "name": "Vespiquen",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "072",
+      "name": "Scyther",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Metal Coat or Black Augurite"
+    },
+    {
+      "id": "073",
+      "name": "Kleavor",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "074",
+      "name": "Scizor",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "075",
+      "name": "Heracross",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "076",
+      "name": "Mime Jr.",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Mimic"
+    },
+    {
+      "id": "077",
+      "name": "Mr. Mime",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "078",
+      "name": "Aipom",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Double Hit"
+    },
+    {
+      "id": "079",
+      "name": "Ambipom",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "080",
+      "name": "Magikarp",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Evolves at level 20"
+    },
+    {
+      "id": "081",
+      "name": "Gyarados",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "082",
+      "name": "Shellos",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "083",
+      "name": "Gastrodon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "084",
+      "name": "Hisuian Qwilfish",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Use Barb Barrage in Strong Style 20 times"
+    },
+    {
+      "id": "085",
+      "name": "Overqwil",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "086",
+      "name": "Happiny",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves when holding Oval Stone during daytime"
+    },
+    {
+      "id": "087",
+      "name": "Chansey",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "088",
+      "name": "Blissey",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "089",
+      "name": "Budew",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship during daytime"
+    },
+    {
+      "id": "090",
+      "name": "Roselia",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Shiny Stone"
+    },
+    {
+      "id": "091",
+      "name": "Roserade",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "092",
+      "name": "Carnivine",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "093",
+      "name": "Petilil",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Sun Stone"
+    },
+    {
+      "id": "094",
+      "name": "Hisuian Lilligant",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "095",
+      "name": "Tangela",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Ancient Power"
+    },
+    {
+      "id": "096",
+      "name": "Tangrowth",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "097",
+      "name": "Barboach",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "098",
+      "name": "Whiscash",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "099",
+      "name": "Croagunk",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "100",
+      "name": "Toxicroak",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "101",
+      "name": "Ralts",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 20,
+      "evolution_criteria": "Evolves at level 20"
+    },
+    {
+      "id": "102",
+      "name": "Kirlia",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30 or with Dawn Stone (male only) for Gallade"
+    },
+    {
+      "id": "103",
+      "name": "Gardevoir",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "104",
+      "name": "Gallade",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "105",
+      "name": "Yanma",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Ancient Power"
+    },
+    {
+      "id": "106",
+      "name": "Yanmega",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "107",
+      "name": "Hippopotas",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "108",
+      "name": "Hippowdon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "109",
+      "name": "Pachirisu",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "110",
+      "name": "Stunky",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 34,
+      "evolution_criteria": "Evolves at level 34"
+    },
+    {
+      "id": "111",
+      "name": "Skuntank",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "112",
+      "name": "Teddiursa",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "113",
+      "name": "Ursaring",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Peat Block during a full moon"
+    },
+    {
+      "id": "114",
+      "name": "Ursaluna",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "115",
+      "name": "Goomy",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "116",
+      "name": "Hisuian Sliggoo",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 50,
+      "evolution_criteria": "Evolves at level 50 during rain or thunderstorm"
+    },
+    {
+      "id": "117",
+      "name": "Hisuian Goodra",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "118",
+      "name": "Onix",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Metal Coat"
+    },
+    {
+      "id": "119",
+      "name": "Steelix",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "120",
+      "name": "Rhyhorn",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 42,
+      "evolution_criteria": "Evolves at level 42"
+    },
+    {
+      "id": "121",
+      "name": "Rhydon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Protector"
+    },
+    {
+      "id": "122",
+      "name": "Rhyperior",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "123",
+      "name": "Bonsly",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Mimic"
+    },
+    {
+      "id": "124",
+      "name": "Sudowoodo",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "125",
+      "name": "Lickitung",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Rollout"
+    },
+    {
+      "id": "126",
+      "name": "Lickilicky",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "127",
+      "name": "Togepi",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "128",
+      "name": "Togetic",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Shiny Stone"
+    },
+    {
+      "id": "129",
+      "name": "Togekiss",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "130",
+      "name": "Turtwig",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 18,
+      "evolution_criteria": "Evolves at level 18"
+    },
+    {
+      "id": "131",
+      "name": "Grotle",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "132",
+      "name": "Torterra",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "133",
+      "name": "Porygon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Upgrade"
+    },
+    {
+      "id": "134",
+      "name": "Porygon2",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Dubious Disc"
+    },
+    {
+      "id": "135",
+      "name": "Porygon-Z",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "136",
+      "name": "Gastly",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "137",
+      "name": "Haunter",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves when traded or with a Linking Cord"
+    },
+    {
+      "id": "138",
+      "name": "Gengar",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "139",
+      "name": "Spiritomb",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "140",
+      "name": "Murkrow",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Dusk Stone"
+    },
+    {
+      "id": "141",
+      "name": "Honchkrow",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "142",
+      "name": "Unown",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "143",
+      "name": "Spheal",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 32,
+      "evolution_criteria": "Evolves at level 32"
+    },
+    {
+      "id": "144",
+      "name": "Sealeo",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 44,
+      "evolution_criteria": "Evolves at level 44"
+    },
+    {
+      "id": "145",
+      "name": "Walrein",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "146",
+      "name": "Remoraid",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 25,
+      "evolution_criteria": "Evolves at level 25"
+    },
+    {
+      "id": "147",
+      "name": "Octillery",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "148",
+      "name": "Skorupi",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "149",
+      "name": "Drapion",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "150",
+      "name": "Hisuian Growlithe",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Fire Stone"
+    },
+    {
+      "id": "151",
+      "name": "Hisuian Arcanine",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "152",
+      "name": "Glameow",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 38,
+      "evolution_criteria": "Evolves at level 38"
+    },
+    {
+      "id": "153",
+      "name": "Purugly",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "154",
+      "name": "Machop",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 28,
+      "evolution_criteria": "Evolves at level 28"
+    },
+    {
+      "id": "155",
+      "name": "Machoke",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves when traded or with a Linking Cord"
+    },
+    {
+      "id": "156",
+      "name": "Machamp",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "157",
+      "name": "Chatot",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "158",
+      "name": "Duskull",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "159",
+      "name": "Dusclops",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Reaper Cloth"
+    },
+    {
+      "id": "160",
+      "name": "Dusknoir",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "161",
+      "name": "Piplup",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 16,
+      "evolution_criteria": "Evolves at level 16"
+    },
+    {
+      "id": "162",
+      "name": "Prinplup",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 36,
+      "evolution_criteria": "Evolves at level 36"
+    },
+    {
+      "id": "163",
+      "name": "Empoleon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "164",
+      "name": "Mantyke",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with a Remoraid in party"
+    },
+    {
+      "id": "165",
+      "name": "Mantine",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "166",
+      "name": "Basculin",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Male Basculin evolve after receiving 294 recoil damage"
+    },
+    {
+      "id": "167",
+      "name": "Basculegion",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "168",
+      "name": "Vulpix",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Fire Stone"
+    },
+    {
+      "id": "169",
+      "name": "Ninetales",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "170",
+      "name": "Tentacool",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "171",
+      "name": "Tentacruel",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "172",
+      "name": "Finneon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 31,
+      "evolution_criteria": "Evolves at level 31"
+    },
+    {
+      "id": "173",
+      "name": "Lumineon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "174",
+      "name": "Magby",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "175",
+      "name": "Magmar",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Magmarizer"
+    },
+    {
+      "id": "176",
+      "name": "Magmortar",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "177",
+      "name": "Magnemite",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "178",
+      "name": "Magneton",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves in special magnetic field"
+    },
+    {
+      "id": "179",
+      "name": "Magnezone",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "180",
+      "name": "Bronzor",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "181",
+      "name": "Bronzong",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "182",
+      "name": "Elekid",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "183",
+      "name": "Electabuzz",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Electirizer"
+    },
+    {
+      "id": "184",
+      "name": "Electivire",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "185",
+      "name": "Gligar",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Razor Fang at night"
+    },
+    {
+      "id": "186",
+      "name": "Gliscor",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "187",
+      "name": "Gible",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 24,
+      "evolution_criteria": "Evolves at level 24"
+    },
+    {
+      "id": "188",
+      "name": "Gabite",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 48,
+      "evolution_criteria": "Evolves at level 48"
+    },
+    {
+      "id": "189",
+      "name": "Garchomp",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "190",
+      "name": "Nosepass",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves in special magnetic field"
+    },
+    {
+      "id": "191",
+      "name": "Probopass",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "192",
+      "name": "Voltorb",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "193",
+      "name": "Hisuian Electrode",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "194",
+      "name": "Rotom",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "195",
+      "name": "Chingling",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship at night"
+    },
+    {
+      "id": "196",
+      "name": "Chimecho",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "197",
+      "name": "Misdreavus",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Dusk Stone"
+    },
+    {
+      "id": "198",
+      "name": "Mismagius",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "199",
+      "name": "Cleffa",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship"
+    },
+    {
+      "id": "200",
+      "name": "Clefairy",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Moon Stone"
+    },
+    {
+      "id": "201",
+      "name": "Clefable",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "202",
+      "name": "Sneasel",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Razor Claw during nighttime"
+    },
+    {
+      "id": "203",
+      "name": "Weavile",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "204",
+      "name": "Hisuian Sneasel",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with Razor Claw during daytime"
+    },
+    {
+      "id": "205",
+      "name": "Sneasler",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "206",
+      "name": "Cranidos",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "207",
+      "name": "Rampardos",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "208",
+      "name": "Shieldon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "209",
+      "name": "Bastiodon",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "210",
+      "name": "Swinub",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 33,
+      "evolution_criteria": "Evolves at level 33"
+    },
+    {
+      "id": "211",
+      "name": "Piloswine",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves after learning Ancient Power"
+    },
+    {
+      "id": "212",
+      "name": "Mamoswine",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "213",
+      "name": "Bergmite",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 37,
+      "evolution_criteria": "Evolves at level 37"
+    },
+    {
+      "id": "214",
+      "name": "Hisuian Avalugg",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "215",
+      "name": "Snorunt",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 42,
+      "evolution_criteria": "Evolves at level 42 or with Dawn Stone (female only) for Froslass"
+    },
+    {
+      "id": "216",
+      "name": "Glalie",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "217",
+      "name": "Froslass",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "218",
+      "name": "Snover",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 40,
+      "evolution_criteria": "Evolves at level 40"
+    },
+    {
+      "id": "219",
+      "name": "Abomasnow",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "220",
+      "name": "Zorua",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 30,
+      "evolution_criteria": "Evolves at level 30"
+    },
+    {
+      "id": "221",
+      "name": "Hisuian Zoroark",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "222",
+      "name": "Rufflet",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": 54,
+      "evolution_criteria": "Evolves at level 54"
+    },
+    {
+      "id": "223",
+      "name": "Hisuian Braviary",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "224",
+      "name": "Riolu",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": "Evolves with high friendship during daytime"
+    },
+    {
+      "id": "225",
+      "name": "Lucario",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "226",
+      "name": "Uxie",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "227",
+      "name": "Mesprit",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "228",
+      "name": "Azelf",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "229",
+      "name": "Heatran",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "230",
+      "name": "Regigigas",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "231",
+      "name": "Cresselia",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "232",
+      "name": "Tornadus",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "233",
+      "name": "Thundurus",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "234",
+      "name": "Landorus",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "235",
+      "name": "Enamorus",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "236",
+      "name": "Dialga",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "237",
+      "name": "Palkia",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "238",
+      "name": "Giratina",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "239",
+      "name": "Arceus",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    },
+    {
+      "id": "240",
+      "name": "Phione",
+      "seen": false,
+      "captured": false,
+      "alpha": false,
+      "shiny": false,
+      "evolution_level": null,
+      "evolution_criteria": null
+    }
+  ]
+} 

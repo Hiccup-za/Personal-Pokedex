@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Pokedex - Legends Arceus</title>
+    <meta name="theme-color" content="#000000">
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #6366f1;
+            --background-color: #000000;
+            --card-background: #1a1a1a;
+            --card-seen: #1e293b;
+            --card-captured: #1e3a8a;
+            --text-color: #f3f4f6;
+            --safe-area-inset-top: env(safe-area-inset-top);
+            --safe-area-inset-bottom: env(safe-area-inset-bottom);
+            --seen-color: #60a5fa;
+            --captured-color: #4ade80;
+            --shiny-color: #fbbf24;
+            --alpha-color: #ec4899;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: var(--safe-area-inset-top);
+            padding-bottom: var(--safe-area-inset-bottom);
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            position: sticky;
+            top: 0;
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            z-index: 100;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            padding: 0.75rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            background-color: rgba(24, 24, 27, 0.8);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(63, 63, 70, 0.5);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.5rem;
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        .stat-emoji {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            text-align: center;
+            margin-top: 0.25rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #searchInput {
+            padding: 0.75rem 1rem;
+            border: 2px solid #4b5563;
+            border-radius: 0.75rem;
+            width: 100%;
+            max-width: 600px;
+            font-size: 1.1rem;
+            background-color: var(--card-background);
+            color: var(--text-color);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        #searchInput::placeholder {
+            color: #9ca3af;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Default for tablets */
+            gap: 1rem;
+            padding: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-background);
+            border-radius: 1rem;
+            color: #9ca3af;
+            font-size: 1.2rem;
+        }
+
+        .pokemon-card {
+            background-color: var(--card-background);
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-left: 0;
+            box-sizing: border-box;
+        }
+
+        .pokemon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+        }
+
+        .pokemon-card.seen {
+            background-color: var(--card-seen);
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--seen-color), 0 0 10px rgba(96, 165, 250, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(160deg, 
+                rgba(30, 58, 138, 0.5) 0%,
+                rgba(96, 165, 250, 0.2) 100%);
+        }
+
+        .pokemon-card.seen::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 85% 7%, rgba(147, 197, 253, 0.3) 0%, rgba(147, 197, 253, 0) 20%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.captured {
+            background-color: var(--card-captured);
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--captured-color), 0 0 10px rgba(74, 222, 128, 0.3);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(160deg, 
+                rgba(6, 78, 59, 0.6) 0%,
+                rgba(5, 150, 105, 0.3) 100%);
+        }
+
+        .pokemon-card.captured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 85% 7%, rgba(134, 239, 172, 0.4) 0%, rgba(134, 239, 172, 0) 25%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.seen .pokemon-name {
+            color: #93c5fd;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.captured .pokemon-name {
+            color: #86efac;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.seen .pokemon-info,
+        .pokemon-card.captured .pokemon-info {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.seen .status-badges,
+        .pokemon-card.captured .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Shiny pokemon styling */
+        .pokemon-card.shiny {
+            background-color: #1a1a42;
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--shiny-color), 0 0 15px rgba(251, 191, 36, 0.6);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.25) 0%,
+                rgba(138, 43, 226, 0.2) 40%,
+                rgba(36, 36, 90, 0.7) 100%);
+        }
+
+        .pokemon-card.shiny::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.15),  /* Gold */
+                rgba(138, 43, 226, 0.15), /* Purple */
+                rgba(0, 191, 255, 0.15),  /* Blue */
+                rgba(50, 205, 50, 0.15),  /* Green */
+                rgba(255, 105, 180, 0.15) /* Pink */
+            );
+            background-size: 300% 300%;
+            border-radius: 1rem;
+            z-index: 1;
+            pointer-events: none;
+            animation: gradient 10s linear infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-card.shiny {
+            position: relative;
+        }
+
+        .pokemon-card.shiny::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.shiny .pokemon-name {
+            color: #fef3c7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.shiny .pokemon-info {
+            position: relative;
+            z-index: 2;
+            color: #fdba74;
+        }
+
+        .pokemon-card.shiny .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.shiny:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6), 0 0 0 2px var(--shiny-color);
+        }
+
+        /* Alpha pokemon styling */
+        .pokemon-card.alpha {
+            background-color: #231c2e;
+            border-left: 0;
+            box-shadow: 0 0 0 2px var(--alpha-color), 0 0 15px rgba(236, 72, 153, 0.6);
+            border-radius: 1rem;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(125deg, 
+                rgba(167, 39, 108, 0.25) 0%,
+                rgba(113, 24, 146, 0.2) 40%,
+                rgba(36, 24, 52, 0.7) 100%);
+        }
+
+        .pokemon-card.alpha::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(125deg, 
+                rgba(236, 72, 153, 0.15),
+                rgba(192, 38, 211, 0.15), 
+                rgba(107, 33, 168, 0.15)
+            );
+            background-size: 300% 300%;
+            border-radius: 1rem;
+            z-index: 1;
+            pointer-events: none;
+            animation: gradient 10s linear infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pokemon-card.alpha {
+            position: relative;
+        }
+
+        .pokemon-card.alpha::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15%);
+            z-index: 1;
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        .pokemon-card.alpha .pokemon-name {
+            color: #fbcfe8;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.alpha .pokemon-info {
+            position: relative;
+            z-index: 2;
+            color: #f9a8d4;
+        }
+
+        .pokemon-card.alpha .status-badges {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pokemon-card.alpha:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.6), 0 0 0 2px var(--alpha-color);
+        }
+
+        /* Alpha & Shiny combination */
+        .pokemon-card.alpha.shiny {
+            background-image: linear-gradient(125deg, 
+                rgba(255, 215, 0, 0.2) 0%,
+                rgba(167, 39, 108, 0.25) 30%,
+                rgba(113, 24, 146, 0.2) 60%,
+                rgba(36, 24, 52, 0.7) 100%);
+            box-shadow: 0 0 0 2px var(--alpha-color), 0 0 15px rgba(236, 72, 153, 0.6), 
+                        0 0 0 4px var(--shiny-color), 0 0 20px rgba(251, 191, 36, 0.4);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 50% 100%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            75% {
+                background-position: 50% 0%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .pokemon-card:active {
+            transform: scale(0.98);
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .pokemon-card.seen:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(96, 165, 250, 0.6), 0 0 0 2px var(--seen-color);
+        }
+
+        .pokemon-card.captured:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(74, 222, 128, 0.6), 0 0 0 2px var(--captured-color);
+        }
+
+        .pokemon-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .pokemon-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            line-height: 1.2;
+            padding-right: 15px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .pokemon-info {
+            color: #9ca3af;
+            font-size: 1rem;
+        }
+
+        .status-badges {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            color: #9ca3af;
+            font-size: 0.875rem;
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: #4b5563;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark.active {
+            background-color: #10b981;
+        }
+
+        .checkmark::before {
+            content: "✓";
+            color: white;
+            font-size: 16px;
+        }
+
+        .emoji-icon {
+            font-size: 1.5rem;
+            opacity: 0.4;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            filter: grayscale(100%);
+        }
+        
+        .emoji-icon.active {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .pokemon-card::after {
+            display: none;
+        }
+
+        .pokemon-card.seen::after {
+            display: none;
+        }
+
+        .pokemon-card.captured::after {
+            display: none;
+        }
+        
+        /* Mobile devices in portrait */
+        @media screen and (max-width: 767px) {
+            .container {
+                padding: 0.75rem;
+            }
+
+            .pokemon-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+                gap: 0.75rem;
+                padding: 0.25rem;
+            }
+
+            .pokemon-card {
+                padding: 0.75rem;
+            }
+
+            .pokemon-name {
+                font-size: 0.9rem;
+            }
+
+            .pokemon-info {
+                font-size: 0.75rem;
+                line-height: 1.2;
+            }
+
+            .status-badges {
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 0.5rem;
+            }
+            
+            .stat-emoji {
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+
+            .emoji-icon {
+                font-size: 1.1rem;
+            }
+            
+            .badge {
+                gap: 0;
+            }
+            
+            .stat-item {
+                padding: 0.3rem;
+            }
+            
+            .stat-value {
+                font-size: 1.25rem;
+            }
+            
+            .stats-container {
+                gap: 0.5rem;
+                padding: 0.6rem;
+                max-width: 100%;
+            }
+            
+            #searchInput {
+                padding: 0.6rem 0.8rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* iPad/tablets in portrait */
+        @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px),
+        screen and (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .pokemon-grid {
+                grid-template-columns: repeat(3, 1fr) !important; /* 3 columns for iPad, with higher specificity */
+                gap: 1rem;
+            }
+
+            .pokemon-card {
+                padding: 0.85rem;
+            }
+
+            .pokemon-name {
+                font-size: 1.2rem;
+            }
+
+            .info-label {
+                font-size: 1.2rem;
+            }
+
+            .badge {
+                padding: 0.75rem 1.25rem;
+                font-size: 1.1rem;
+            }
+
+            .stats-container {
+                gap: 1rem;
+                padding: 1rem;
+                max-width: 600px;
+            }
+
+            .stat-item {
+                min-width: 120px;
+                padding: 0.6rem;
+            }
+
+            .stat-value {
+                font-size: 1.75rem;
+            }
+            
+            .stat-emoji {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Larger screens */
+        @media screen and (min-width: 1025px) {
+            .pokemon-grid {
+                grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
+                gap: 1.25rem;
+            }
+            
+            .container {
+                padding: 2rem;
+                max-width: 1400px;
+            }
+            
+            .pokemon-card {
+                padding: 0.85rem;
+                height: 100%;
+            }
+            
+            .pokemon-name {
+                font-size: 1rem;
+            }
+            
+            .pokemon-info {
+                font-size: 0.85rem;
+            }
+            
+            .emoji-icon {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Legends Arceus</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by name, number, shiny, or alpha...">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="seenCount">0</span>
+                        <span class="stat-emoji">👀 Seen</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="capturedCount">0</span>
+                        <span class="stat-emoji">📦 Captured</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="shinyCount">0</span>
+                        <span class="stat-emoji">✨ Shiny</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="alphaCount">0</span>
+                        <span class="stat-emoji">👑 Alpha</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="pokemon-grid" id="pokemonGrid"></div>
+    </div>
+
+    <script>
+        let pokemonData = [];
+
+        async function loadPokemonData() {
+            try {
+                // Load directly from JSON file
+                const response = await fetch('./data/legends-arceus.json');
+                if (!response.ok) {
+                    throw new Error(`Failed to load Pokémon data: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                pokemonData = data.pokemon;
+                
+                // Ensure all pokemon have the shiny and alpha properties
+                pokemonData.forEach(pokemon => {
+                    if (pokemon.shiny === undefined) {
+                        pokemon.shiny = false;
+                    }
+                    if (pokemon.alpha === undefined) {
+                        pokemon.alpha = false;
+                    }
+                });
+
+                // Apply any saved status from localStorage
+                const savedData = localStorage.getItem('legendsArceusPokemonData');
+                if (savedData) {
+                    const savedPokemon = JSON.parse(savedData);
+                    // Update only the status fields from localStorage
+                    pokemonData.forEach(pokemon => {
+                        const savedEntry = savedPokemon.find(p => p.id === pokemon.id);
+                        if (savedEntry) {
+                            pokemon.seen = savedEntry.seen || false;
+                            pokemon.captured = savedEntry.captured || false;
+                            pokemon.shiny = savedEntry.shiny || false;
+                            pokemon.alpha = savedEntry.alpha || false;
+                        }
+                    });
+                }
+                
+                displayPokemon(pokemonData);
+            } catch (error) {
+                console.error('Error loading Pokémon data:', error);
+                document.getElementById('pokemonGrid').innerHTML = 
+                    '<div class="no-results">Failed to load Pokémon data. Please try again later.</div>';
+            }
+        }
+        
+        function savePokemonData() {
+            try {
+                // Save only status data to localStorage
+                const statusData = pokemonData.map(pokemon => ({
+                    id: pokemon.id,
+                    seen: pokemon.seen,
+                    captured: pokemon.captured,
+                    shiny: pokemon.shiny,
+                    alpha: pokemon.alpha
+                }));
+                
+                localStorage.setItem('legendsArceusPokemonData', JSON.stringify(statusData));
+                // Update game stats for the home page
+                updateGameStats();
+            } catch (error) {
+                console.error('Error saving Pokémon data:', error);
+            }
+        }
+
+        // Function to update the game stats in the home page data
+        function updateGameStats() {
+            try {
+                // Get user games from localStorage
+                const savedGames = localStorage.getItem('userGames');
+                if (savedGames) {
+                    const userGames = JSON.parse(savedGames);
+                    
+                    // Find the Legends Arceus game
+                    const arceusGame = userGames.find(game => game.type === 'legends-arceus');
+                    if (arceusGame) {
+                        // Count seen, captured, shiny, and alpha Pokémon
+                        const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+                        const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+                        const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+                        const alphaCount = pokemonData.filter(pokemon => pokemon.alpha).length;
+                        const totalCount = pokemonData.length;
+                        
+                        // Update the game stats
+                        arceusGame.stats = {
+                            seen: seenCount,
+                            captured: capturedCount,
+                            shiny: shinyCount,
+                            alpha: alphaCount,
+                            total: totalCount
+                        };
+                        
+                        // Save back to localStorage
+                        localStorage.setItem('userGames', JSON.stringify(userGames));
+                    }
+                }
+            } catch (error) {
+                console.error('Error updating game stats:', error);
+            }
+        }
+
+        function displayPokemon(pokemonList) {
+            const grid = document.getElementById('pokemonGrid');
+            grid.innerHTML = '';
+
+            // Update stats
+            const seenCount = pokemonData.filter(pokemon => pokemon.seen).length;
+            const capturedCount = pokemonData.filter(pokemon => pokemon.captured).length;
+            const shinyCount = pokemonData.filter(pokemon => pokemon.shiny).length;
+            const alphaCount = pokemonData.filter(pokemon => pokemon.alpha).length;
+            const totalCount = pokemonData.length;
+            
+            document.getElementById('seenCount').textContent = seenCount;
+            document.getElementById('capturedCount').textContent = `${capturedCount} / ${totalCount}`;
+            document.getElementById('shinyCount').textContent = shinyCount;
+            document.getElementById('alphaCount').textContent = alphaCount;
+
+            if (pokemonList.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'No Pokémon found matching your search.';
+                grid.appendChild(noResults);
+                return;
+            }
+
+            pokemonList.forEach(pokemon => {
+                const card = document.createElement('div');
+                card.className = 'pokemon-card';
+                
+                // Add status classes for styling
+                if (pokemon.alpha && pokemon.shiny) {
+                    card.classList.add('alpha', 'shiny');
+                } else if (pokemon.alpha) {
+                    card.classList.add('alpha');
+                } else if (pokemon.shiny) {
+                    card.classList.add('shiny');
+                } else if (pokemon.captured) {
+                    card.classList.add('captured');
+                } else if (pokemon.seen) {
+                    card.classList.add('seen');
+                }
+
+                card.innerHTML = `
+                    <div class="pokemon-info-container">
+                        <div class="pokemon-name">#${pokemon.id} ${pokemon.name}</div>
+                        ${pokemon.evolution_level || pokemon.evolution_criteria ? `
+                        <div class="pokemon-info">
+                            ${pokemon.evolution_level ? `Evolves at level ${pokemon.evolution_level}` : pokemon.evolution_criteria}
+                        </div>
+                        ` : ''}
+                    </div>
+                    <div class="status-badges">
+                        <div class="badge" data-id="${pokemon.id}" data-status="seen">
+                            <span class="emoji-icon ${pokemon.seen ? 'active' : ''}">👀</span>
+                        </div>
+                        <div class="badge" data-id="${pokemon.id}" data-status="captured">
+                            <span class="emoji-icon ${pokemon.captured ? 'active' : ''}">📦</span>
+                        </div>
+                        <div class="badge" data-id="${pokemon.id}" data-status="shiny">
+                            <span class="emoji-icon ${pokemon.shiny ? 'active' : ''}">✨</span>
+                        </div>
+                        <div class="badge" data-id="${pokemon.id}" data-status="alpha">
+                            <span class="emoji-icon ${pokemon.alpha ? 'active' : ''}">👑</span>
+                        </div>
+                    </div>
+                `;
+
+                // Add touch event listeners for better mobile interaction
+                card.addEventListener('touchstart', () => {
+                    card.style.transform = 'scale(0.98)';
+                });
+
+                card.addEventListener('touchend', () => {
+                    card.style.transform = '';
+                });
+
+                // Add click handlers for status badges
+                const badges = card.querySelectorAll('.badge');
+                badges.forEach(badge => {
+                    badge.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const id = badge.dataset.id;
+                        const status = badge.dataset.status;
+                        togglePokemonStatus(id, status);
+                    });
+                });
+
+                // Add click handler for the emoji icons
+                const emojiIcons = card.querySelectorAll('.emoji-icon');
+                emojiIcons.forEach(icon => {
+                    icon.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const badge = icon.closest('.badge');
+                        const id = badge.dataset.id;
+                        const status = badge.dataset.status;
+                        togglePokemonStatus(id, status);
+                    });
+                });
+
+                grid.appendChild(card);
+            });
+        }
+
+        function togglePokemonStatus(id, status) {
+            // Find pokemon by string ID comparison
+            const pokemon = pokemonData.find(p => String(p.id) === String(id));
+            if (!pokemon) {
+                console.log("Pokemon not found with ID:", id);
+                return;
+            }
+
+            if (status === 'captured') {
+                pokemon.captured = !pokemon.captured;
+                // If marking as captured, ensure seen is true
+                if (pokemon.captured) {
+                    pokemon.seen = true;
+                } else {
+                    // If unmarking captured, also unset shiny and alpha
+                    pokemon.shiny = false;
+                    pokemon.alpha = false;
+                }
+            } else if (status === 'seen') {
+                pokemon.seen = !pokemon.seen;
+                // If unsetting seen, also unset captured, shiny, and alpha
+                if (!pokemon.seen) {
+                    pokemon.captured = false;
+                    pokemon.shiny = false;
+                    pokemon.alpha = false;
+                }
+            } else if (status === 'shiny') {
+                // Initialize shiny property if it doesn't exist
+                if (pokemon.shiny === undefined) {
+                    pokemon.shiny = false;
+                }
+                pokemon.shiny = !pokemon.shiny;
+                
+                // If marking as shiny, ensure seen and captured are true
+                if (pokemon.shiny) {
+                    pokemon.seen = true;
+                    pokemon.captured = true;
+                }
+            } else if (status === 'alpha') {
+                // Initialize alpha property if it doesn't exist
+                if (pokemon.alpha === undefined) {
+                    pokemon.alpha = false;
+                }
+                pokemon.alpha = !pokemon.alpha;
+                
+                // If marking as alpha, ensure seen and captured are true
+                if (pokemon.alpha) {
+                    pokemon.seen = true;
+                    pokemon.captured = true;
+                }
+            }
+
+            // Save the updated data
+            savePokemonData();
+
+            // Re-display the current filtered list
+            const searchTerm = document.getElementById('searchInput').value;
+            filterPokemon(searchTerm);
+        }
+
+        function filterPokemon(searchTerm) {
+            searchTerm = searchTerm.toLowerCase().trim();
+            
+            // Special case for searching shiny Pokémon
+            if (searchTerm === 'shiny') {
+                const filtered = pokemonData.filter(pokemon => pokemon.shiny);
+                displayPokemon(filtered);
+                return;
+            }
+            
+            // Special case for searching alpha Pokémon
+            if (searchTerm === 'alpha') {
+                const filtered = pokemonData.filter(pokemon => pokemon.alpha);
+                displayPokemon(filtered);
+                return;
+            }
+            
+            const filtered = pokemonData.filter(pokemon => {
+                // Check name match
+                const nameMatch = pokemon.name.toLowerCase().includes(searchTerm);
+                
+                // Check ID match with padded format
+                const paddedId = pokemon.id.toString().padStart(3, '0');
+                const idMatch = paddedId.includes(searchTerm);
+                
+                return nameMatch || idMatch;
+            });
+            displayPokemon(filtered);
+        }
+
+        // Debounce the search input to improve performance
+        let searchTimeout;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                filterPokemon(e.target.value);
+            }, 300);
+        });
+
+        // Load the data when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPokemonData();
+            
+            // Add a back button to navigate to the home page
+            const header = document.querySelector('header');
+            const backButton = document.createElement('div');
+            backButton.style.position = 'absolute';
+            backButton.style.left = '1rem';
+            backButton.style.top = '1rem';
+            backButton.style.fontSize = '1.5rem';
+            backButton.style.cursor = 'pointer';
+            backButton.style.padding = '0.5rem';
+            backButton.style.backgroundColor = 'var(--card-background)';
+            backButton.style.borderRadius = '0.5rem';
+            backButton.style.width = '40px';
+            backButton.style.height = '40px';
+            backButton.style.display = 'flex';
+            backButton.style.alignItems = 'center';
+            backButton.style.justifyContent = 'center';
+            backButton.innerHTML = '&larr;';
+            backButton.title = 'Back to Home';
+            
+            backButton.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+            
+            header.style.position = 'relative';
+            header.appendChild(backButton);
+        });
+    </script>
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html> 
