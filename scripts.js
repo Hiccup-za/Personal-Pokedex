@@ -7,8 +7,27 @@ function generateUniqueId() {
     return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }
 
+// Check if localStorage is available and working
+function isLocalStorageAvailable() {
+    try {
+        const test = 'test';
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
 // Function to load games from localStorage
 function loadGames() {
+    if (!isLocalStorageAvailable()) {
+        // If localStorage is not available, just init with empty array
+        userGames = [];
+        renderContent();
+        return;
+    }
+    
     try {
         const savedGames = localStorage.getItem('userGames');
         if (savedGames) {
@@ -35,35 +54,8 @@ function saveGames() {
 
 // Function to initialize games for first time
 function initializeGames() {
-    // Create default games
-    userGames = [
-        {
-            id: generateUniqueId(),
-            name: 'Scarlet',
-            type: 'scarlet',
-            dateAdded: new Date().toISOString(),
-            icon: './images/scarlet-icon.webp',
-            stats: {
-                seen: 0,
-                captured: 0,
-                shiny: 0,
-                total: 0
-            }
-        },
-        {
-            id: generateUniqueId(),
-            name: 'Violet',
-            type: 'violet',
-            dateAdded: new Date().toISOString(),
-            icon: './images/violet-icon.webp',
-            stats: {
-                seen: 0,
-                captured: 0,
-                shiny: 0,
-                total: 0
-            }
-        }
-    ];
+    // Initialize with an empty array instead of default games
+    userGames = [];
     
     saveGames();
     renderContent();
