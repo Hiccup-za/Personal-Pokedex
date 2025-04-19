@@ -179,6 +179,7 @@ h1 {
     border-color: rgba(99, 102, 241, 0.5);
 }
 
+/* Empty state styling */
 .empty-state {
     display: flex;
     flex-direction: column;
@@ -187,6 +188,43 @@ h1 {
     width: 100%;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.empty-state h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.first-game-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.first-game-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+.first-game-button .plus-icon {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .add-button-container {
